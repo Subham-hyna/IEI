@@ -1,0 +1,155 @@
+.profile {
+    background-color: #d1edff;
+    background: linear-gradient(to right , #e2e2e2 , #c9d6ff);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px;
+    min-height: 100vh;
+}
+
+.p-main {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  background-color: #ffffff5e;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  width: 70vw;
+  min-height: 70vh;
+}
+
+.p-left {
+    background-color: #9151cc;
+    position: relative;
+}
+
+.p-left>ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-left>ul>li {
+    font-size: 18px;
+    font-family: "Roboto",sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 14vw;
+    height: 56px;
+    padding: 10px;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+    position: relative;
+}
+
+.p-left>ul>li:last-child{
+    border-bottom: 0px;
+} 
+
+.p-left>ul>li:hover{
+    background-color: #6c3bb7;
+}
+
+.active-link{
+    background-color: #5923ac;
+}
+
+.p-right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.p-upper{
+    display: flex;
+    padding: 10px 0;
+}
+
+.p-arrow{
+    display: none;
+}
+
+.p-upper>span {
+    font-size: 28px;
+    font-family: Tenor;
+    color: #4d4d4d;
+    font-weight: 400;
+    position: relative;
+}
+
+.p-upper>span::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 50%;
+    height: 2.5px;
+    border-radius: 20px;
+    background-color: #8269ec;
+}
+
+@media screen and (max-width : 1050px){
+    
+    .profile {
+        padding: 50px;
+    }
+
+    .p-main{
+        width: 80vw;
+    }
+
+
+    .p-left>ul>li {
+        font-size: 14px;
+        font-family: "Roboto",sans-serif;
+        color: white;
+        display: flex;
+        align-items: center;
+        width: 18vw;
+        height: 34px;
+        padding: 10px 5px 10px 10px;
+        border-bottom: 1px solid white;
+    }
+}
+
+@media screen and (max-width: 750px){
+
+    .profile{
+        align-items: flex-start;
+    }
+
+    .p-main{
+        padding: 10px;
+    }
+
+    .p-left{
+        background: #9151cc;
+        position: fixed;
+        top: 0;
+        left: -200px;
+        width: 200px;
+        height: 100vh;
+        z-index: 100;
+        color: grey;
+        transition: 0.3s ease-in-out;
+        justify-content: start;
+    }
+
+    .p-left>ul>li {
+        width: 185px;
+    }
+
+    .p-arrow{
+        display: block;
+        cursor: pointer;
+    }
+
+    .p-upper{
+        gap: 10px;
+    }
+
+    .p-upper>span {
+        font-size: 20px;
+    }
+}

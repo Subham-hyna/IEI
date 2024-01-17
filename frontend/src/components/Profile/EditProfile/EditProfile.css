@@ -1,0 +1,83 @@
+.edit-profile{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 20px 40px 20px;
+}
+
+.edit-profile>div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.edit-profile>div>label{
+    font-size: 15px;
+    font-family: "Roboto" , sans-serif;
+    font-weight: 500;
+}
+
+.edit-profile>div>div{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.edit-profile>div>div>input[type=text] {
+    background-color: #decefabd;
+    border: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    height: 45px;
+    width: 25vw;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.edit-profile>div>div>button{
+    background: #7f51c2;
+    color: white;
+    padding: 11px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: 500;
+    width: 155px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Roboto" , sans-serif;
+    border: none;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-profile>div>div>button:hover{
+    background-color: #7e3ae4;
+} 
+
+@media screen and (max-width:750px){
+    
+    .edit-profile>div>div>input[type=text]{
+        width: 50vw;
+    }
+
+    .edit-profile>div>div>button{
+        width: 22vw;
+    }
+}
+
+@media screen and (max-width:550px){
+    
+    .edit-profile>div>div>input[type=text]{
+        width: 67vw;
+    }
+
+    .edit-profile>div>div>button{
+        width: 20vw;
+    }
+}

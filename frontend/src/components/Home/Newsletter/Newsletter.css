@@ -1,0 +1,230 @@
+.news-outer{
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    height: 550px;
+}
+
+.news-inner {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(#edfaff, #c0ccffa5);
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 0 20px;
+    border-radius: 0 0 100% 100%;
+    box-shadow: 1px 13px 10px #00000026;
+}
+
+.news-inner>h1 {
+    font-family: 'Tenor Sans';
+    font-size: 62px;
+    font-weight: 200;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.news-inner>h1>span{
+    color: #6e4cd4;
+}
+
+.news-inner>h2 {
+    font-family: "Roboto" , sans-serif;
+    letter-spacing: 1;
+    font-weight: 100;
+    font-size: 28px;
+    margin-bottom: 17px;
+    text-align: center;
+}
+
+.news-inner>h2>span{
+    color: #6e4cd4;
+}
+
+.news-inner>h3 {
+    font-family: "Roboto",sans-serif;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.news-messagebox {
+    width: 65vw;
+    height: 169px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4329b3;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0px 7px 10px #00000069;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.news-messagebox>form{
+    display: flex;
+    gap: 2px;
+    width: 340px;
+    padding: 5px 14px;
+    background-color: white;
+    height: 45px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-messagebox>form>input[type=email] {
+    background-color: white;
+    border: none;
+    color: #5b5b5b;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    flex: 8;
+    height: 45px;
+    border-radius: 5px;
+}
+
+.news-messagebox>form>button {
+    background: #1060ff;
+    color: white;
+    padding: 11px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: 500;
+    width: 155px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Roboto" , sans-serif;
+    border: none;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:1250px) {
+    .news-inner>h1 {
+        font-size: 56px;
+    }
+    .news-inner>h2 {
+        font-size: 27px;
+    }
+    .news-inner>h3 {
+        font-size: 26px;
+    }
+    .news-messagebox>form{
+        width: 36vw;
+    }
+}
+
+@media screen and (max-width:950px) {
+    .news-inner>h1 {
+        font-size: 50px;
+    }
+    .news-inner>h2 {
+        font-size: 23px;
+    }
+    .news-inner>h3 {
+        font-size: 22px;
+    }
+    .news-messagebox{
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        padding: 9px 20px;
+    }
+    .news-messagebox>form{
+        width: 46vw;
+    }
+    .news-messagebox>form>button {
+        font-size: 12px;
+        font-weight: 400;
+        width: 120px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .news-inner>h1 {
+        font-size: 48px;
+    }
+    .news-inner>h2 {
+        font-size: 21px;
+    }
+    .news-inner>h3 {
+        font-size: 20px;
+    }
+    .news-messagebox>form>button {
+        font-size: 11px;
+        font-weight: 400;
+        width: 100px;
+    }
+    .news-messagebox>form>input[type=email]{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .news-outer{
+        height: 370px;
+    }
+    .news-inner>h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .news-inner>h2 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .news-inner>h3 {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .news-messagebox{
+        align-items: center;
+        height: 120px;
+        width: 65vw;
+    }
+    .news-messagebox>form{
+        width: 60vw;
+        padding: 2px 10px;
+    }
+    .news-messagebox>form>input[type=email] {
+        font-size: 11px;
+    }
+    .news-messagebox>form>button {
+        font-size: 9px;
+        width: 75px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .news-inner>h1 {
+        font-size: 34px;
+    }
+    .news-inner>h2 {
+        font-size: 13px;
+    }
+    .news-inner>h3 {
+        font-size: 12px;
+    }
+    .news-messagebox{
+        align-items: center;
+    }
+    .news-messagebox>h3{
+        font-size: 12px;
+    }
+    .news-messagebox>form{
+        padding: 2px 10px;
+    }
+    .news-messagebox>form>input[type=email] {
+        font-size: 8px;
+    }
+    .news-messagebox>form>button {
+        font-size: 9px;
+        width: 70px;
+    }
+}

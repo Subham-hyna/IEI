@@ -1,0 +1,242 @@
+.developer{
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    min-height: 100vh;
+    padding: 50px 50px;
+    position: relative;
+}
+
+.developer:after{
+    content: "";
+    background: url("../../assets/devbg.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    /* background-position: center; */
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.developer>span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.developer>span>h1{
+    font-size: 6.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: rgb(55,226,197);
+    background: linear-gradient(90deg, rgba(55,180,226,1) 26%, rgba(210,38,250,1) 79%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: 'Dancing Script', cursive;
+    position: relative;
+}
+
+.developer>span>h1::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 70%;
+    height: 2.5px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgba(55,180,226,1) 26%, rgba(210,38,250,1) 79%);
+}
+
+.developer-senior {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.developer-senior>div{
+    width: 65vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+  
+.developer-senior>span{
+    width: 20rem;
+}
+
+.developer-senior>span>h2{
+    font-size: 7rem;
+    font-family: 'Dancing Script', cursive;
+    background: rgb(66,133,244);
+    background: linear-gradient(90deg, rgba(66,133,244,1) 9%, rgba(219,68,55,1) 28%, rgba(244,180,0,1) 79%, rgba(15,157,88,1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 600;
+}
+
+.developer-senior>span>p {
+    font-size: 5rem;
+    font-family: 'Cedarville Cursive', cursive;
+    background: rgb(35,194,191);
+    background: linear-gradient(90deg, rgba(35,194,191,1) 9%, rgba(144,55,219,1) 28%, rgba(244,202,0,1) 79%, rgba(15,119,157,1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin-top: -4.5rem;
+    margin-left: 10rem;
+}
+
+.swiper{
+    width: 60vw;
+}
+
+.developer-junior {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.developer-junior>div{
+    width: 65vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+  
+.developer-junior>span{
+    width: 20rem;
+}
+
+.developer-junior>span>h2{
+    font-size: 7rem;
+    font-family: 'Dancing Script', cursive;
+    background: rgb(66,133,244);
+    background: linear-gradient(90deg, rgba(66,133,244,1) 9%, rgba(219,68,55,1) 28%, rgba(244,180,0,1) 79%, rgba(15,157,88,1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 600;
+}
+
+.developer-junior>span>p {
+    font-size: 5rem;
+    font-family: 'Cedarville Cursive', cursive;
+    background: rgb(35,194,191);
+    background: linear-gradient(90deg, rgba(35,194,191,1) 9%, rgba(144,55,219,1) 28%, rgba(244,202,0,1) 79%, rgba(15,119,157,1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin-top: -4.5rem;
+    margin-left: 10rem;
+}
+
+@media screen and (max-width: 1250px) {
+    .developer{
+        padding: 50px 15px;
+    }
+    .developer>span>h1{
+        font-size: 5rem;
+    }
+    .developer-senior{
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    .developer-senior>span{
+        width: 18rem;
+    }
+    .developer-senior>span>h2{
+        font-size: 6.5rem;
+    }
+    .developer-senior>span>p{
+        font-size: 4.5rem;
+    }
+    .swiper{
+        width: 53vw;
+    }
+    .developer-junior{
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    .developer-junior>span{
+        width: 18rem;
+    }
+    .developer-junior>span>h2{
+        font-size: 6.5rem;
+    }
+    .developer-junior>span>p{
+        font-size: 4.5rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .developer{
+        padding: 50px 15px;
+    }
+    .developer>span>h1{
+        font-size: 3rem;
+    }
+    .developer-senior{
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .developer-senior>span{
+        width: 18rem;
+    }
+    .developer-senior>span>h2{
+        font-size: 4.5rem;
+    }
+    .developer-senior>span>p{
+            font-size: 3rem;
+            margin-top: -3.5rem;
+            margin-left: 8rem;
+    }
+    .developer-senior>div{
+        width: 75vw;
+    }
+    .swiper{
+        width: 80vw;
+    }
+    .developer-junior{
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .developer-junior>span{
+        width: 18rem;
+        order: 1;
+    }
+    .developer-junior>span>h2{
+        font-size: 4.5rem;
+    }
+    .developer-junior>span>p{
+            font-size: 3rem;
+            margin-top: -3.5rem;
+            margin-left: 8rem;
+    }
+    .developer-junior>div{
+        width: 75vw;
+        order: 2;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .swiper{
+        width: 100vw;
+    }
+    .developer-senior>div{
+        width: 97vw;
+    }
+    .developer-junior>div{
+        width: 97vw;
+    }
+    .developer>span>h1{
+        font-size: 30px;
+    }
+}
+  

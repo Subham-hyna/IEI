@@ -1,0 +1,183 @@
+.developer-card {
+    width: 330px;
+    height: 400px;
+    background: white;
+    border-radius: 32px;
+    padding: 3px;
+    position: relative;
+    box-shadow: #604b4a30 0px -1px 20px 6px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .developer-card>a {
+    position: absolute;
+    right: 2rem;
+    top: 1.4rem;
+    background: transparent;
+    border: none;
+  }
+  
+  .developer-card>a svg {
+    stroke: #fbb9b6;
+    stroke-width: 3px;
+  }
+  
+  .developer-card>a svg:hover {
+    stroke: #f55d56;
+    cursor: pointer;
+  }
+  
+  .developer-card .developer-profile-pic {
+    position: absolute;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    top: 3px;
+    left: 3px;
+    border-radius: 29px;
+    z-index: 1;
+    border: 0px solid #fbb9b6;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
+  }
+  
+  .developer-card .developer-profile-pic img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    -o-object-position: 0px 0px;
+    object-position: 0px 0px;
+    transition: all 0.5s ease-in-out 0s;
+  }
+  
+  .developer-card .developer-profile-pic svg {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 0px 0px;
+    object-position: 0px 0px;
+    transform-origin: 45% 20%;
+    transition: all 0.5s ease-in-out 0s;
+  }
+  
+  .developer-card .developer-bottom {
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    background: #fbb9b6;
+    top: 80%;
+    border-radius: 29px;
+    z-index: 2;
+    box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px inset;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  }
+  
+  .developer-card .developer-bottom .developer-bottom-content {
+    position: absolute;
+    bottom: 0;
+    left: 1.5rem;
+    right: 1.5rem;
+    height: 200px;
+  }
+  
+  .developer-card .developer-bottom .developer-bottom-content .name {
+    display: block;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .developer-card .developer-bottom .developer-bottom-content .about-me {
+    display: block;
+    font-size: 0.9rem;
+    color: white;
+    margin-top: 1rem;
+  }
+  
+  .developer-card .developer-bottom .developer-bottom-bottom {
+    position: absolute;
+    bottom: 1rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .developer-card .developer-bottom .developer-bottom-bottom .social-links-container {
+    display: flex;
+    gap: 0.8rem;
+  }
+  
+  .developer-card .developer-bottom .developer-bottom-bottom .social-links-container>a>img {
+    height: 30px;
+    filter: drop-shadow(0 5px 5px rgba(165, 132, 130, 0.1333333333));
+  }
+  
+  .developer-card .developer-bottom .developer-bottom-bottom .social-links-container>a>img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  .developer-card .developer-bottom .developer-bottom-bottom>button {
+    background: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.6rem;
+    padding: 0.6rem 1rem;
+    box-shadow: rgba(165, 132, 130, 0.1333333333) 0px 5px 5px 0px;
+}
+
+.developer-card .developer-bottom .developer-bottom-bottom>button>a{
+    color: #fbb9b6;
+    text-decoration: none;
+  } 
+  
+  .developer-card .developer-bottom .developer-bottom-bottom>button:hover{
+    background: #f55d56;
+    cursor: pointer;
+}
+
+.developer-card .developer-bottom .developer-bottom-bottom>button:hover a{
+    color: white;
+  }
+  
+  .developer-card:hover {
+    border-top-left-radius: 55px;
+  }
+  
+  .developer-card:hover .developer-bottom {
+    top: 20%;
+    border-radius: 80px 29px 29px 29px;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+  }
+  
+  .developer-card:hover .developer-profile-pic {
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    z-index: 3;
+    border: 7px solid #fbb9b6;
+    box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px;
+    transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
+  }
+  
+  .developer-card:hover .developer-profile-pic img {
+    transform: scale(1);
+    -o-object-position: 0px 25px;
+    object-position: 0px 0px;
+    transition: all 0.5s ease-in-out 0.5s;
+  }
+
+  @media screen and (max-width: 450px) {
+    .developer-card{
+        width: 280px;
+        height: 320px;
+    }
+  }

@@ -1,0 +1,332 @@
+.team{
+    display: flex;
+    flex-direction: column;
+    background-color: #d1edff;
+    background: linear-gradient(to right, #e2e2e2 , #c9d6ff);
+}
+
+.t-upper {
+    position: relative;
+    margin-bottom: 50px;
+    height: 286px;
+    display: flex;
+    opacity: 0.8;
+    justify-content: center;
+    align-items: center;
+}
+
+.t-upper:before {    
+    content: "";
+    background: url('../../assets/teamsbg.jpg');
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    background-position-y: -118px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.t-upper>span{
+    font-family: "Tenor" , sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+.t-upper>button{
+    background: #d91945;
+    color: white;
+    padding: 11px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: 500;
+    width: 155px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Roboto" , sans-serif;
+    border: none;
+    position: absolute;
+    left: 10vw;
+    bottom: -88px;
+}
+
+.t-upper>button:hover{
+    background:red;
+}
+
+.t-upper>div{
+    position: absolute;
+    right: 10vw;
+    bottom: -88px;
+}
+
+.t-upper>div>div{
+    background-color: #dbd8f740;
+}
+
+.t-upper>div>div>div>fieldset{
+    border-color: #6211a7b3;
+}
+
+.t-upper>div>div>div>svg{
+    right: 26px;
+}
+
+.t-lower{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 0 0 50px 0;
+}
+
+.t-lower>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.t-lower>div>span {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-family: "Roboto" , sans-serif;
+    position: relative;
+}
+
+.t-lower>div>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.t-lower>div>div>p{
+    font-size: 22px;
+    font-family: "Roboto" , sans-serif;
+}
+
+.t-lower>div>span::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 70%;
+    height: 2.5px;
+    border-radius: 20px;
+    background-color: #8269ec;
+}
+
+@media screen and (max-width:1150px){
+    .t-upper{
+        margin-bottom: 60px;
+    }
+    .t-upper::before{
+        background-position-y: -80px;
+    }
+    .t-upper>span{
+        font-size: 35px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .t-upper>div{
+        transform: scale(0.9);
+    }
+    .t-lower>div{
+        gap: 10px;
+    }
+    .t-lower>div>span{
+        font-size: 36px;
+    }
+}
+
+.add-member{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    gap: 15px;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background-color: #ffffff;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+    padding: 31px;
+    border-radius: 10px;
+    display: flex;
+    height: 25vw;
+    overflow-y: scroll;
+    flex-direction: column;
+}
+
+.add-member>div{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.add-member>div>label{
+    font-size: 15px;
+    font-family: "Roboto" , sans-serif;
+    font-weight: 500;
+}
+
+.add-member>div>div{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.add-member>div>div>input[type=text] {
+    background-color: #decefabd;
+    border: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+.add-member>div>div>input[type=file] {
+    background-color: #a877ffbd;
+    border: none;
+    color: whitesmoke;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    height: 25px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+
+.add-member>div>div>select {
+    background-color: #a877ffbd;
+    border: none;
+    color: whitesmoke;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+.add-member>div>button {
+    background: #7f51c2;
+    color: white;
+    padding: 11px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: 500;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Roboto" , sans-serif;
+    border: none;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-member>div>button:hover{
+    background-color: #25195c;
+    cursor: pointer;
+}
+.add-member>div>div>input[type=file]::file-selector-button{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 12px;
+    color: whitesmoke;
+    background-color: #9057f2bd;
+    padding: 3px;
+}
+
+.add-member>div>div>textarea{
+    background-color: #c5abf3bd;
+    resize:none;
+    height: 200px;
+    width: 100%;
+    padding: 15px;
+}
+
+@media screen and (max-width:750px){
+    .t-upper{
+        height: 140px;
+        margin-bottom: 100px;
+    }
+    .t-upper::before{
+        background-position-y: -58px;
+    }
+    .t-upper>span{
+        font-size: 26px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .t-lower>div{
+        gap: 10px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .t-lower>div>span{
+        font-size: 33px;
+    }
+    .t-lower>div>div:first-child{
+        overflow-x: scroll;
+        padding: 10px;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .t-lower>div>div{
+        overflow-x: scroll;
+        padding: 10px;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:450px){
+    .t-upper{
+        margin-bottom: 123px;
+    }
+    .t-upper::before{
+        background-position-y: -32px;
+    }
+    .t-upper>span{
+        font-size: 25px;
+    }
+    .t-lower>div{
+        gap: 10px;
+    }
+    .t-lower>div>span{
+        font-size: 28px;
+    }
+    .t-upper>button{
+        width: 100px;
+        font-size: 13px;
+    }
+    
+}
+
+@media screen and (max-width:550px){
+    .add-member{
+        width: 60vw;
+        height: 100vw;
+    }
+}

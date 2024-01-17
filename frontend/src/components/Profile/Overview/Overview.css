@@ -1,0 +1,196 @@
+.overview {
+    display: flex;
+    justify-content: space-between;
+    padding: 27px;
+    flex-wrap: wrap-reverse;
+    gap: 8vw;
+}
+
+.o-left {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 20vw;
+}
+
+.o-left>div {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.o-left>div>p {
+    font-family: "Roboto" , sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #656565;
+}
+
+.o-left>div>span {
+    font-size: 18px;
+    color: #8642aa;
+    font-weight: 500;
+    font-family: "Tenor" , sans-serif;
+}
+
+.o-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.o-right>img {
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    box-shadow: 1px 1px 18px 5px rgb(133 66 192 / 20%);
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.o-right>button {
+    width: 100%;
+    padding: 20px;
+    background-color: #7f51c2;
+    border: 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: "Roboto" , sans-serif;
+}
+
+.o-right>button:hover{
+    cursor: pointer;
+    background-color: #7e3ae4;
+} 
+
+.profile-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    gap: 26px;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #ffffff;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+    padding: 31px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-modal>label {
+    font-size: 20px;
+    font-family: "Roboto" , sans-serif;
+    font-weight: 500;
+    color: #642996;
+}
+
+.profile-modal>input[type=file] {
+    background-color: #a877ffbd;
+    border: none;
+    color: whitesmoke;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    height: 25px;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+
+.profile-modal>input[type=file]::file-selector-button{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 12px;
+    color: whitesmoke;
+    background-color: #9057f2bd;
+    padding: 3px;
+}
+
+.profile-modal>input[type=file]::file-selector-button:hover{
+    background-color: #7837eabd;
+    cursor: pointer;
+}
+
+.profile-modal>button{
+    background: #7f51c2;
+    color: white;
+    padding: 11px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: 500;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Roboto" , sans-serif;
+    border: none;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-modal>button:hover{
+    background-color: #7e3ae4;
+} 
+
+@media screen and (max-width:1300px){
+    
+    .overview{
+        gap: 5vw;
+    }
+
+    .o-right>img{
+        width: 200px;
+        height: 200px;
+    }
+
+}
+
+@media screen and (max-width:750px){
+    
+    .overview{
+        gap: 40px;
+        justify-content: flex-start;
+    }
+
+    .o-left{
+        width: 36vw;
+    }
+
+    .o-right{
+        gap: 20px;
+    }
+
+    .o-right>img{
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile-modal{
+        width: 60vw;
+    }
+
+}
+
+@media screen and (max-width: 450px){
+    .o-right>button{
+        width: 85%;
+    }
+
+    .o-left>div>p {
+        font-size: 14px;
+    }
+    
+    .o-left>div>span {
+        font-size: 16px;
+    }
+
+}

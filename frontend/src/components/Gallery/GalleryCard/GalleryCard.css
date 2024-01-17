@@ -1,0 +1,92 @@
+.gallery-card{
+    position: relative;
+}
+
+.gallery-card>img{
+    width: 400px;
+    height: 250px;
+    border-radius: 19px;
+    object-fit: cover;
+    padding: 3px;
+    background: rgb(255, 255, 255);
+    filter: drop-shadow(-4px 10px 9px #666666);
+    transition: 0.3s;
+}
+
+.gallery-card>i{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.gallery-card>i>svg{
+    color: red;
+    font-size: 36px;
+}
+
+.gallery-card>i>svg:hover{
+    color: rgb(235, 66, 94);
+    cursor: pointer;
+}
+
+.gallery-card>img:hover{
+    transform: scale(1.025);
+    cursor: pointer;
+}
+
+.gallery-card-modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-card-modal>img{
+    width: 50vw;
+    height: 35vw;
+    object-fit: contain;
+}
+
+@media screen and (max-width:1250px){
+    .gallery-card>img{
+        width: 350px;
+        height: 225px;
+    }
+}
+
+@media screen and (max-width:950px){
+    .gallery-card-modal>img{
+        width: 80vw;
+        height: 60vw;
+    }
+}
+
+@media screen and (max-width:750px){
+    .gallery-card>img{
+        width: 282px;
+        height: 188px;
+    }
+}
+
+@media screen and (max-width:650px){
+    .gallery-card-modal>img{
+        width: 75vw;
+        height: 70vw;
+    }
+}
+
+@media screen and (max-width:650px){
+    .gallery-card-modal>img{
+        width: 85vw;
+        height: 95vw;
+    }
+}

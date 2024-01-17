@@ -1,0 +1,95 @@
+  .error-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    align-items: center;
+    justify-content: flex-start;
+    background: url('../../assets/aboutbg.jpg')  no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    gap: 45px;
+  }
+
+  .error-container>h1 {
+    font-size: 200px;
+    letter-spacing: 20px;
+    background: url('../../assets/mountain.jpg')  no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  background-size: cover;
+  text-align: center;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.error-container>p {
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    color: rgb(87, 81, 81);
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .error-container>a {
+    padding: 10px 20px;
+    font-size: 20px;
+    color: rgb(5, 102, 140);
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .error-container>a:hover{
+    color: #4521c7;
+  }
+
+  @media screen and (max-width: 1250px) {
+    
+    .error-container > h1 {
+      font-size: 8em;
+    }
+  
+    .error-container > p {
+      font-size: 1.2em;
+    }
+  
+    .error-container > a {
+      font-size: 0.8em;
+      padding: 8px 16px;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    
+    .error-container{
+        padding: 50px;
+    }
+
+    .error-container > h1 {
+      font-size: 140px;
+    }
+  
+    .error-container > p {
+      font-size: 18px;
+    }
+  
+    .error-container > a {
+      font-size: 18px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+   
+    .error-container > h1 {
+      font-size: 100px;
+      letter-spacing: 10px;
+    }
+  
+    .error-container > p {
+      font-size: 14px;
+    }
+  
+    .error-container > a {
+      font-size: 14px;
+    }
+  }

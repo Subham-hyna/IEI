@@ -1,0 +1,225 @@
+.event{
+    display: flex;
+    flex-direction: column;
+    background-color: #d1edff;
+    background: linear-gradient(to right , #e2e2e2 , #c9d6ff);
+    min-height: 100vh;
+    gap: 30px;
+}
+
+.event-upper {
+    position: relative;
+    margin-bottom: 70px;
+    height: 286px;
+    display: flex;
+    opacity: 0.8;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-upper::before {    
+    content: "";
+    background: url('../../assets/eventbg.jpeg');
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    background-position: center;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.event-upper>h1{
+    font-family: "Tenor" , sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+.event-upper>div{
+    position: absolute;
+    right: 6vw;
+    bottom: -88px;
+}
+
+.event-upper>div>div{
+    background-color: #dbd8f740;
+}
+
+.event-upper>div>div>div>fieldset{
+    border-color: #6211a7b3;
+}
+
+.event-upper>div>div>div>svg{
+    right: 26px;
+}
+
+.event-upper>form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    border-radius: 50px;
+    margin: 69px 0 10px 0;
+    padding: 7px 21px;
+    position: relative;
+}
+
+.event-upper>form>input[type=text] {
+  background-color: #ffffffbd;
+  border: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  height: 38px;
+  width: 20vw;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+.event-upper>form>button {
+    background-color: #5f3fd7bd;
+    border: none;
+    color: whitesmoke;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    height: 36px;
+    width: 3vw;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+
+.event-upper>form>button:hover{
+    cursor: pointer;
+    background-color: rgb(102, 41, 225);
+}
+
+.event-upper>button{
+    background: #d91945;
+    color: white;
+    padding: 11px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: 500;
+    width: 155px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Roboto" , sans-serif;
+    border: none;
+    position: absolute;
+    left: 10vw;
+    bottom: -88px;
+}
+
+.event-upper>button:hover{
+    background:red;
+}
+
+.event-lower{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 59px;
+    padding: 0 0 30px 0;
+}
+
+.event-lower>h1{
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: "Roboto" , sans-serif;
+    position: relative;
+}
+
+.event-lower>div {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 67vw;
+}
+
+.event-lower>h1::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 70%;
+    height: 2.5px;
+    border-radius: 20px;
+    background-color: #8269ec;
+}
+
+.event-lower>div>p{
+    font-size: 18px;
+}
+
+@media screen and (max-width:1150px){
+    .event-upper{
+        margin-bottom: 60px;
+    }
+    .event-upper>h1{
+        font-size: 35px;
+    }
+    .event-upper>form>input[type=text] {
+        width: 28vw;
+    }
+    .event-upper>form>button{
+        width: 6vw;
+    }
+}
+
+@media screen and (max-width:750px){
+    .event-upper{
+        margin-bottom: 100px;
+    }
+    .event-upper>h1{
+        font-size: 27px;
+    }
+    .event-upper>form>input[type=text] {
+        width: 44vw;
+    }
+    .event-upper>form>button{
+        width: 11vw;
+    }
+    .event-lower>h1{
+        font-size: 33px;
+    }
+    .event-lower>div{
+        max-width: 85vw;
+    }
+}
+
+@media screen and (max-width:450px){
+    .event-upper{
+        margin-bottom: 123px;
+    }
+    .event-upper>h1{
+        font-size: 25px;
+        text-align: center;
+    }
+    .event-upper>form{
+        padding: 2px 16px;
+    }
+    .event-upper>form>input[type=text] {
+        width: 45vw;
+        font-size: 14px;
+    }
+    .event-upper>form>button{
+        width: 16vw;
+    }
+    .event-lower>h1{
+        font-size: 28px;
+    }
+}

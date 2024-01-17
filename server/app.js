@@ -4,7 +4,6 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const errorMiddleware = require("./middleware/error");
 const cors = require("cors");
-const session = require("express-session");
 
 //Setting Event Listeners limit
 const EventEmitter = require("events");
@@ -22,18 +21,6 @@ app.use(cors({
     credentials: true,
     origin: process.env.FRONTEND_URL,
     methods: ["GET" ,"POST", "PUT", "DELETE"]
-}))
-
-app.use(session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false,
-
-    cookie:{
-        ssecure: process.env.NODE_ENV === "development" ? false : true,
-        httpOnly: process.env.NODE_ENV === "development" ? false : true,
-        sameSite: process.env.NODE_ENV === "development" ? false : "none",
-    }
 }))
 
 // Route Imports

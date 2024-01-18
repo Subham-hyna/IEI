@@ -46,9 +46,7 @@ export const loadUser = () => async (dispatch) => {
   try {
     dispatch(loadUserRequest());
 
-    const { data } = await axios.get(`${server}/me`,
-    { withCredentials: true}
-    );
+    const { data } = await axios.get(`${server}/me`);
 
     dispatch(loadUserSuccess(data.user));
   } catch (error) {
@@ -80,8 +78,7 @@ export const updateAvatar = (userData) => async (dispatch) => {
 
     const { data } = await axios.put(`${server}/avatar/update`,
    userData,
-    config,
-    { withCredentials: true}
+    config
     );
 
     dispatch(updateAvatarSuccess(data));

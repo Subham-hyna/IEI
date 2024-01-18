@@ -13,15 +13,11 @@ myEmitter.setMaxListeners(15);
 // Config
 require("dotenv").config({ path: "config/config.env" });
 
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(cors(
-    {
-        origin: process.env.FRONTEND_URL
-    }
-))
 
 // Route Imports
 const user = require("./routes/userRoutes");

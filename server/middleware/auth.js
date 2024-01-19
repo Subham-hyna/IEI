@@ -7,7 +7,7 @@ exports.isAuthenticatedUser = catchAsyncErrors(async (req, res, next) => {
   const { secure_iei } = req.cookies;
   const { token } = req.query;
 
-  if (!secure_iei || !token) {
+  if (!token) {
     return next(new ErrorHandler("Not Logged In", 401));
   }
 

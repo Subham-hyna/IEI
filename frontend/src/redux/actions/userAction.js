@@ -12,8 +12,7 @@ export const signup = (userData) => async (dispatch) => {
 
     const { data } = await axios.post(`${server}/register`,
    userData,
-    config,
-    { withCredentials: true}
+    config
     );
 
     dispatch(signupSuccess(data));
@@ -32,8 +31,7 @@ export const login = (email,password) => async (dispatch) => {
 
     const { data } = await axios.post(`${server}/login`,
     { email , password },
-    config,
-    { withCredentials: true}
+    config
     );
 
     dispatch(loginSuccess(data));
@@ -48,8 +46,7 @@ export const loadUser = (token) => async (dispatch) => {
   try {
     dispatch(loadUserRequest());
 
-    const { data } = await axios.get(`${server}/me?token=${token}`,
-    { withCredentials: true}
+    const { data } = await axios.get(`${server}/me?token=${token}`
     );
 
     dispatch(loadUserSuccess(data.user));

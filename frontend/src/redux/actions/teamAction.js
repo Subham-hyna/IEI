@@ -26,8 +26,7 @@ export const createMember = (memberData,token) => async (dispatch) => {
 
     const { data } = await axios.post(`${server}/admin/addMember?token=${token}`,
     memberData,
-    config,
-    { withCredentials: true }
+    config
     );
 
     dispatch(newTeamSuccess(data));
@@ -73,8 +72,7 @@ export const updateTeamAvatar = (memberData,id,token) => async (dispatch) => {
 
     const { data } = await axios.put(`${server}/admin/team/updateAvatar/${id}?token=${token}`,
    memberData,
-    config,
-    { withCredentials: true}
+    config
     );
 
     dispatch(updateTeamAvatarSuccess(data.success));

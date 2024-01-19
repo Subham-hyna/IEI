@@ -78,8 +78,7 @@ export const updateEventPoster = (eventData,id,token) => async (dispatch) => {
 
     const { data } = await axios.put(`${server}/admin/event/updatePoster/${id}?token=${token}`,
    eventData,
-    config,
-    { withCredentials: true}
+    config
     );
 
     dispatch(updateEventPosterSuccess(data.success));

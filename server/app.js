@@ -4,6 +4,7 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const errorMiddleware = require("./middleware/error");
 const cors = require("cors");
+app.use(cors());
 
 //Setting Event Listeners limit
 const EventEmitter = require("events");
@@ -13,7 +14,6 @@ myEmitter.setMaxListeners(15);
 // Config
 require("dotenv").config({ path: "config/config.env" });
 
-app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));

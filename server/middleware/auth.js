@@ -5,12 +5,13 @@ const User = require("../model/userModel");
 
 exports.isAuthenticatedUser = catchAsyncErrors(async (req, res, next) => {
   const { secure_iei } = req.cookies;
+  const { token } = req.query;
 
-  if (!secure_iei) {
+  if (!secure_iei || !token) {
     return next(new ErrorHandler("Not Logged In", 401));
   }
 
-  const decodedData = jwt.verify(secure_iei, process.env.JWT_SECRET);
+  const decodedData = jwt.verify(token, process.env.JWT_SECRET);
 
   req.user = await User.findById(decodedData._id);
 

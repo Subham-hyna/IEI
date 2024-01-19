@@ -17,7 +17,8 @@ const DeleteAccount = () => {
 
   const deleteHandler = () => {
 
-    dispatch(deleteMe(password));
+    const token = localStorage.getItem("token");
+    dispatch(deleteMe(password,token));
   }
 
   useEffect(()=>{

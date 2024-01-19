@@ -19,13 +19,14 @@ const ChangePassword = () => {
 
   const updateHandler = (e) => {
     e.preventDefault();
+    const token = localStorage.getItem("token");
     const formData = new FormData();
 
     formData.append("oldPassword",oldPassword);
     formData.append("newPassword",newPassword);
     formData.append("confirmPassword",confirmPassword);
 
-    dispatch(updatePassword(formData));
+    dispatch(updatePassword(formData,token));
 
   }
 

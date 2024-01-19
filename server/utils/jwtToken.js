@@ -14,7 +14,8 @@ const sendToken = (user, statusCode, res, message) => {
     res.status(statusCode).cookie("secure_iei", token, options).json({
       success: true,
       user,
-      message
+      message,
+      token
     });
   };
   

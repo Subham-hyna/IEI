@@ -33,6 +33,7 @@ const Team = () => {
   const newTeamHandler = (e) => {
     e.preventDefault();
 
+    const token = localStorage.getItem("token")
     const formData = new FormData();
 
     formData.append("name",name);
@@ -44,7 +45,7 @@ const Team = () => {
     formData.append("linkedIn",linkedInlink);
     formData.append("photo",image);
 
-    dispatch(createMember(formData));
+    dispatch(createMember(formData,token));
 
   }
 
@@ -56,7 +57,8 @@ const Team = () => {
   const { loading, fourthYears, thirdYears, secondYears, fic, error, isDeleted, message, isCreated, buttonLoading } = useSelector(state=>state.team);
 
   const deleteHandler = (id) => {
-    dispatch(deleteTeam(id));
+    const token = localStorage.getItem("token")
+    dispatch(deleteTeam(id,token));
   }
 
   useEffect(()=>{

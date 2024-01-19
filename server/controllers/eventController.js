@@ -193,6 +193,9 @@ exports.deleteEvent = catchAsyncErrors(async (req, res, next) => {
     if(!event){
         return next(new ErrorHandler("Invalid Event Id" , 400))
     }
+    if(!req.file){
+        return next(new ErrorHandler("Please Select a file" , 400))
+    }
 
     const myCloud = await cloudinary.uploader.upload(req.file.path, {
       folder: "events"

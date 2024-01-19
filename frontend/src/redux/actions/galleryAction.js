@@ -19,13 +19,13 @@ export const getActivity = (keyword = "", currentPage = 1) => async (dispatch) =
 };
 
 // Create Activity
-export const createActivity = (activityData) => async (dispatch) => {
+export const createActivity = (activityData,token) => async (dispatch) => {
     try {
       dispatch(newActivityRequest());
   
       const config = { headers: { "Content-Type": "multipart/form-data" } };
 
-      const { data } = await axios.post(`${server}/admin/activity/new`,
+      const { data } = await axios.post(`${server}/admin/activity/new?token=${token}`,
       activityData,
       config,
       { withCredentials: true }
@@ -38,11 +38,11 @@ export const createActivity = (activityData) => async (dispatch) => {
 };
 
 // Delete Activity
-export const deleteActivity = (id) => async (dispatch) => {
+export const deleteActivity = (id,token) => async (dispatch) => {
     try {
       dispatch(deleteActivityRequest());
   
-      const { data } = await axios.delete(`${server}/admin/deleteActivity/${id}`);
+      const { data } = await axios.delete(`${server}/admin/deleteActivity/${id}?token=${token}`);
   
       dispatch(deleteActivitySuccess(data));
     } catch (error) {

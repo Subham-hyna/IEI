@@ -20,13 +20,13 @@ export const subscribeLetter = (userData) => async(dispatch) => {
 }
 
 //Send Letters
-export const sendLetters = (mailData) => async(dispatch) => {
+export const sendLetters = (mailData,token) => async(dispatch) => {
     try {
         dispatch(sendLettersRequest());
 
         const config = { headers: { "Content-Type": "application/json" } };
     
-        const { data } = await axios.post(`${server}/admin/sendletters`,
+        const { data } = await axios.post(`${server}/admin/sendletters?token=${token}`,
         mailData,
         config
         );

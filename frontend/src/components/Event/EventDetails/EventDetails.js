@@ -23,11 +23,12 @@ const EventDetails = () => {
     const { id } = useParams();
 
     const deleteHandler = (public_id) => {
-        console.log(public_id);
+
+        const token = localStorage.getItem("token");
         const formData = new FormData();
   
         formData.append("public_id",public_id);
-        dispatch(deleteEventPhotos(formData,id));
+        dispatch(deleteEventPhotos(formData,id,token));
     }
 
     useEffect(()=>{

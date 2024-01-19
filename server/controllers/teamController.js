@@ -9,6 +9,9 @@ const ApiFeatures = require("../utils/apiFeatures")
 exports.addMember = catchAsyncErrors( async (req,res,next) => {
     const { name , post , year , FY , insta , facebook , linkedIn } = req.body;
 
+    if(!req.file){
+      return next(new ErrorHandler("Please Enter the details",401));
+    }
     let myCloud;
 
     if (req.file) {

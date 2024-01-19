@@ -13,13 +13,14 @@ const Mail = () => {
     const dispatch = useDispatch();
 
     const sendMailHandler = () => {
+      const token = localStorage.getItem("token");
       const formData = new FormData();
 
       formData.append("title",title);
       formData.append("style",style);
       formData.append("body",body);
 
-      dispatch(sendLetters(formData));
+      dispatch(sendLetters(formData,token));
     }
 
     useEffect(()=>{

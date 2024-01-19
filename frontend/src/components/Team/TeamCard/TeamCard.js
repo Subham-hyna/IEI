@@ -30,6 +30,7 @@ const TeamCard = ({ member, deleteHandler }) => {
 
     const updateHandler = (id) => {
     
+      const token = localStorage.getItem("token")
       const formData = new FormData();
   
       formData.append("name",name);
@@ -40,16 +41,17 @@ const TeamCard = ({ member, deleteHandler }) => {
       formData.append("facebook",fblink);
       formData.append("linkedIn",linkedInlink);
   
-      dispatch(updateTeam(formData,id));
+      dispatch(updateTeam(formData,id,token));
     }
 
     const updateAvatarHandler = (id) => {
-    
+      
+      const token = localStorage.getItem("token")
       const formData = new FormData();
   
       formData.append("photo",avatar);
   
-      dispatch(updateTeamAvatar(formData,id));
+      dispatch(updateTeamAvatar(formData,id,token));
     }
 
     useEffect(() => {

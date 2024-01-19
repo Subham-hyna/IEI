@@ -28,7 +28,8 @@ const dispatch = useDispatch();
 let { isAuthenticated, error, user, message } = useSelector((state)=>state.user);
 
 useEffect(()=>{
-  dispatch(loadUser());
+  const token = localStorage.getItem("token");
+  dispatch(loadUser(token));
 },[dispatch])
 
 useEffect(()=>{

@@ -18,13 +18,13 @@ export const getTeam = (fy) => async (dispatch) => {
 };
 
 // Create Member
-export const createMember = (memberData) => async (dispatch) => {
+export const createMember = (memberData,token) => async (dispatch) => {
   try {
     dispatch(newTeamRequest());
 
     const config = { headers: { "Content-Type": "multipart/form-data" } };
 
-    const { data } = await axios.post(`${server}/admin/addMember`,
+    const { data } = await axios.post(`${server}/admin/addMember?token=${token}`,
     memberData,
     config,
     { withCredentials: true }
@@ -37,11 +37,11 @@ export const createMember = (memberData) => async (dispatch) => {
 };
 
 // Delete Member
-export const deleteTeam = (id) => async (dispatch) => {
+export const deleteTeam = (id,token) => async (dispatch) => {
     try {
       dispatch(deleteTeamRequest());
   
-      const { data } = await axios.delete(`${server}/admin/deleteMember/${id}`);
+      const { data } = await axios.delete(`${server}/admin/deleteMember/${id}?token=${token}`);
   
       dispatch(deleteTeamSuccess(data));
     } catch (error) {
@@ -50,13 +50,13 @@ export const deleteTeam = (id) => async (dispatch) => {
 };
 
 // Update Team Details
-export const updateTeam = (memberData,id) => async (dispatch) => {
+export const updateTeam = (memberData,id,token) => async (dispatch) => {
     try {
       dispatch(updateTeamRequest());
   
       const config = { headers: { "Content-Type": "application/json" } };
   
-      const { data } = await axios.put(`${server}/admin/updateMember/${id}`, memberData, config);
+      const { data } = await axios.put(`${server}/admin/updateMember/${id}?token=${token}`, memberData, config);
   
       dispatch(updateTeamSuccess(data));
     } catch (error) {
@@ -65,13 +65,13 @@ export const updateTeam = (memberData,id) => async (dispatch) => {
   };
 
 //Update Avatar
-export const updateTeamAvatar = (memberData,id) => async (dispatch) => {
+export const updateTeamAvatar = (memberData,id,token) => async (dispatch) => {
   try {
     dispatch(updateTeamAvatarRequest());
 
     const config = { headers: { "Content-Type": "multipart/form-data" } };
 
-    const { data } = await axios.put(`${server}/admin/team/updateAvatar/${id}`,
+    const { data } = await axios.put(`${server}/admin/team/updateAvatar/${id}?token=${token}`,
    memberData,
     config,
     { withCredentials: true}

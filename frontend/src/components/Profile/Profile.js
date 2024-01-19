@@ -28,6 +28,7 @@ const Profile = () => {
 
     const logoutHandler = () => {
         dispatch(logout());
+        localStorage.setItem("token","");
         navigate("/");
     }
 

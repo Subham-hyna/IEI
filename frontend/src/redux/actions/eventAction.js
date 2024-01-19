@@ -23,16 +23,15 @@ export const getEvents = (keyword = "", currentPage = 1, status) => async (dispa
 };
 
 // Create Event
-export const createEvent = (eventData) => async (dispatch) => {
+export const createEvent = (eventData,token) => async (dispatch) => {
   try {
     dispatch(newEventRequest());
 
     const config = { headers: { "Content-Type": "multipart/form-data" } };
 
-    const { data } = await axios.post(`${server}/admin/addEvent`,
+    const { data } = await axios.post(`${server}/admin/addEvent?token=${token}`,
     eventData,
-    config,
-    { withCredentials: true }
+    config
     );
 
     dispatch(newEventSuccess(data));
@@ -42,11 +41,11 @@ export const createEvent = (eventData) => async (dispatch) => {
 };
 
 // Delete Event
-export const deleteEvent = (id) => async (dispatch) => {
+export const deleteEvent = (id,token) => async (dispatch) => {
     try {
       dispatch(deleteEventRequest());
   
-      const { data } = await axios.delete(`${server}/admin/deleteEvent/${id}`);
+      const { data } = await axios.delete(`${server}/admin/deleteEvent/${id}?token=${token}`);
   
       dispatch(deleteEventSuccess(data));
     } catch (error) {
@@ -55,13 +54,13 @@ export const deleteEvent = (id) => async (dispatch) => {
 };
 
 // Update Event Details
-export const updateEvent = (eventData,id) => async (dispatch) => {
+export const updateEvent = (eventData,id,token) => async (dispatch) => {
     try {
       dispatch(updateEventRequest());
   
       const config = { headers: { "Content-Type": "application/json" } };
   
-      const { data } = await axios.put(`${server}/admin/updateEvent/${id}`, eventData, config);
+      const { data } = await axios.put(`${server}/admin/updateEvent/${id}?token=${token}`, eventData, config);
   
       dispatch(updateEventSuccess(data));
     } catch (error) {
@@ -71,13 +70,13 @@ export const updateEvent = (eventData,id) => async (dispatch) => {
 
 
 //Update Event Poster
-export const updateEventPoster = (eventData,id) => async (dispatch) => {
+export const updateEventPoster = (eventData,id,token) => async (dispatch) => {
   try {
     dispatch(updateEventPosterRequest());
 
     const config = { headers: { "Content-Type": "multipart/form-data" } };
 
-    const { data } = await axios.put(`${server}/admin/event/updatePoster/${id}`,
+    const { data } = await axios.put(`${server}/admin/event/updatePoster/${id}?token=${token}`,
    eventData,
     config,
     { withCredentials: true}
@@ -90,16 +89,15 @@ export const updateEventPoster = (eventData,id) => async (dispatch) => {
 };
 
 //Add Event Photo
-export const addEventPhoto = (eventPhoto,id) => async (dispatch) => {
+export const addEventPhoto = (eventPhoto,id,token) => async (dispatch) => {
   try {
     dispatch(addEventPhotoRequest());
 
     const config = { headers: { "Content-Type": "multipart/form-data" } };
 
-    const { data } = await axios.put(`${server}/admin/event/addPhoto/${id}`,
+    const { data } = await axios.put(`${server}/admin/event/addPhoto/${id}?token=${token}`,
     eventPhoto,
-    config,
-    { withCredentials: true}
+    config
     );
 
     dispatch(addEventPhotoSuccess(data.success));
@@ -109,11 +107,11 @@ export const addEventPhoto = (eventPhoto,id) => async (dispatch) => {
 };
 
 // Get Event Details
-export const getEventDetails = (id) => async (dispatch) => {
+export const getEventDetails = (id,token) => async (dispatch) => {
     try {
       dispatch(getEventDetailsRequest());
   
-      const { data } = await axios.get(`${server}/getEvent/${id}`);
+      const { data } = await axios.get(`${server}/getEvent/${id}?`);
   
       dispatch(getEventDetailsSuccess(data.event));
     } catch (error) {
@@ -122,11 +120,11 @@ export const getEventDetails = (id) => async (dispatch) => {
 };
 
 // Delete Event Photo
-export const deleteEventPhotos = (eventData,id) => async (dispatch) => {
+export const deleteEventPhotos = (eventData,id,token) => async (dispatch) => {
     try {
       dispatch(deleteEventPhotoRequest());
       const config = { headers: { "Content-Type": "application/json" } };
-      const { data } = await axios.put(`${server}/admin/event/removePhoto/${id}`,
+      const { data } = await axios.put(`${server}/admin/event/removePhoto/${id}?token=${token}`,
       eventData,
       config );
   

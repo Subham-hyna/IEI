@@ -31,7 +31,7 @@ const Event = () => {
 
     const newEventHandler = (e) => {
         e.preventDefault();
-
+        const token = localStorage.getItem("token");
         const formData = new FormData();
 
         formData.append("title",title);
@@ -41,7 +41,7 @@ const Event = () => {
         formData.append("date",date);
         formData.append("photo",image);
     
-        dispatch(createEvent(formData));
+        dispatch(createEvent(formData,token));
     }
 
     const navigate = useNavigate();
@@ -70,7 +70,8 @@ const Event = () => {
       }
     
       const deleteHandler = (id) => {
-        dispatch(deleteEvent(id));
+        const token = localStorage.getItem("token");
+        dispatch(deleteEvent(id,token));
       }
     
       const { keyword } = useParams();

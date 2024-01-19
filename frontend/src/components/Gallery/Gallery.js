@@ -42,14 +42,12 @@ const {
 
   const newActivityHandler = (e) => {
     e.preventDefault();
-
+    const token = localStorage.getItem("token");
     const formData = new FormData();
 
     formData.append("title",title);
     formData.append("photo",image);
-    dispatch(createActivity(formData));
-    setTitle("");
-    setImage("");
+    dispatch(createActivity(formData,token));
   };
 
   const handleSearch = () => {
@@ -62,7 +60,8 @@ const {
   }
 
   const deleteHandler = (id) => {
-    dispatch(deleteActivity(id));
+    const token = localStorage.getItem("token");
+    dispatch(deleteActivity(id,token));
   }
 
   const { keyword } = useParams();

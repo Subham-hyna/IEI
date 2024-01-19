@@ -18,11 +18,12 @@ const Overview = () => {
 
     const updateHandler = (e) => {
         e.preventDefault();
+        const token = localStorage.getItem("token");
         const formData = new FormData();
 
         formData.append("photo",avatar);
 
-        dispatch(updateAvatar(formData));
+        dispatch(updateAvatar(formData,token));
         setAvatar("");
     }
 

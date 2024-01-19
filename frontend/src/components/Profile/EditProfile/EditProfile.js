@@ -21,6 +21,7 @@ const EditProfile = () => {
 
   const updateHandler = () => {
     
+    const token = localStorage.getItem("token");
     const formData = new FormData();
 
     formData.append("name",name);
@@ -29,7 +30,7 @@ const EditProfile = () => {
     formData.append("year",year);
     formData.append("institute",institute);
 
-    dispatch(updateProfile(formData));
+    dispatch(updateProfile(formData,token));
 
   }
 

@@ -15,7 +15,7 @@ const EventCard = ({event,  status, deleteHandler}) => {
     const [date , setDate] = useState(event.date);
     const [addStatus , setAddStatus] = useState(event.status);
     const [poster, setPoster] = useState("")
-    const [photo, setPhoto] = useState("")
+    const [photo, setPhoto] = useState()
     
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -26,25 +26,27 @@ const EventCard = ({event,  status, deleteHandler}) => {
     const navigate = useNavigate();
 
     const updatePosterHandler = (id) => {
-      
+      const token = localStorage.getItem("token")
       const formData = new FormData();
   
       formData.append("photo",poster);
   
-      dispatch(updateEventPoster(formData,id));
+      dispatch(updateEventPoster(formData,id,token));
     }
 
     const addPhotoHandler = (id) => {
       
+      const token = localStorage.getItem("token")
       const formData = new FormData();
   
       formData.append("photo",photo);
   
-      dispatch(addEventPhoto(formData,id));
+      dispatch(addEventPhoto(formData,id,token));
     }
 
     const updateHandler = (id) => {
     
+      const token = localStorage.getItem("token")
       const formData = new FormData();
   
       formData.append("title",title);
@@ -53,7 +55,7 @@ const EventCard = ({event,  status, deleteHandler}) => {
       formData.append("status",addStatus);
       formData.append("date",date);
   
-      dispatch(updateEvent(formData,id));
+      dispatch(updateEvent(formData,id,token));
     }
 
     useEffect(() => {

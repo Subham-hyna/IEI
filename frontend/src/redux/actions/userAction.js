@@ -17,6 +17,7 @@ export const signup = (userData) => async (dispatch) => {
     );
 
     dispatch(signupSuccess(data));
+    localStorage.setItem("token",data.token);
   } catch (error) {
     dispatch(signupFail(error.response.data.message));
   }
@@ -36,17 +37,20 @@ export const login = (email,password) => async (dispatch) => {
     );
 
     dispatch(loginSuccess(data));
+    localStorage.setItem("token",data.token);
   } catch (error) {
     dispatch(loginFail(error.response.data.message));
   }
 };
 
 //LoadUser
-export const loadUser = () => async (dispatch) => {
+export const loadUser = (token) => async (dispatch) => {
   try {
     dispatch(loadUserRequest());
 
-    const { data } = await axios.get(`${server}/me`);
+    const { data } = await axios.get(`${server}/me?token=${token}`,
+    { withCredentials: true}
+    );
 
     dispatch(loadUserSuccess(data.user));
   } catch (error) {
@@ -55,13 +59,13 @@ export const loadUser = () => async (dispatch) => {
 };
 
 // Update Profile
-export const updateProfile = (userData) => async (dispatch) => {
+export const updateProfile = (userData,token) => async (dispatch) => {
     try {
       dispatch(updateProfileRequest());
   
       const config = { headers: { "Content-Type": "application/json" } };
   
-      const { data } = await axios.put(`${server}/me/update`, userData, config);
+      const { data } = await axios.put(`${server}/me/update?token=${token}`, userData, config);
   
       dispatch(updateProfileSuccess(data));
     } catch (error) {
@@ -70,15 +74,15 @@ export const updateProfile = (userData) => async (dispatch) => {
 };
 
 //Update Avatar
-export const updateAvatar = (userData) => async (dispatch) => {
+export const updateAvatar = (userData,token) => async (dispatch) => {
   try {
     dispatch(updateAvatarRequest());
 
     const config = { headers: { "Content-Type": "multipart/form-data" } };
 
-    const { data } = await axios.put(`${server}/avatar/update`,
+    const { data } = await axios.put(`${server}/avatar/update?token=${token}`,
    userData,
-    config
+    config,
     );
 
     dispatch(updateAvatarSuccess(data));
@@ -88,15 +92,16 @@ export const updateAvatar = (userData) => async (dispatch) => {
 };
 
 // Update Password
-export const updatePassword = (userData) => async (dispatch) => {
+export const updatePassword = (userData,token) => async (dispatch) => {
     try {
       dispatch(updatePasswordRequest());
   
       const config = { headers: { "Content-Type": "application/json" } };
   
-      const { data } = await axios.put(`${server}/password/update`, userData, config);
+      const { data } = await axios.put(`${server}/password/update?token=${token}`, userData, config);
   
       dispatch(updatePasswordSuccess(data));
+      localStorage.setItem("token",data.token);
     } catch (error) {
       dispatch(updatePasswordFail(error.response.data.message));
     }
@@ -131,17 +136,18 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
     );
 
     dispatch(resetPasswordSuccess(data.success));
+    localStorage.setItem("token",data.token);
   } catch (error) {
     dispatch(resetPasswordFail(error.response.data.message));
   }
 };
 
 // Delete Account
-export const deleteMe = (password) => async (dispatch) => {
+export const deleteMe = (password,token) => async (dispatch) => {
   try {
     dispatch(deleteUserRequest());
 
-    const { data } = await axios.delete(`${server}/me/delete/${password}`);
+    const { data } = await axios.delete(`${server}/me/delete/${password}?token=${token}`);
 
     dispatch(deleteUserSuccess(data));
   } catch (error) {

@@ -43,9 +43,9 @@ const Contact = () => {
   };
 
   useEffect(()=>{
-    if(success){
+    if(done && success){
       toast.success(message);
-      dispatch(clearMessages());
+      dispatch(clearMessages);
       dispatch(contactReset());
       setDone(false);
     }

@@ -37,7 +37,7 @@ exports.addMember = catchAsyncErrors( async (req,res,next) => {
         insta,
         facebook,
         linkedIn,
-        image
+        avatar:image
     })
     if (req.file) {
         fs.unlink(req.file.path, (err) => {

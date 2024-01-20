@@ -37,9 +37,9 @@ exports.passwordResetMail = (name , resetLink) => {
         }
 
         a {
-            color: #1a75ff;
             text-decoration: none;
             font-weight: bold;
+            color: rgb(255, 255, 255)
         }
 
         a:hover {

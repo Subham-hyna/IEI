@@ -8,8 +8,6 @@ import Newsletter from './Newsletter/Newsletter';
 import About from './About/About';
 import Activities from './Activities/Activities';
 import MetaData from '../Layout/MetaData';
-import Loader from '../utils/Loader/Loader'
-import { useSelector } from 'react-redux';
 
 const Home = () => {
     const options = {
@@ -23,12 +21,7 @@ const Home = () => {
         },
       };
 
-    const { loading } = useSelector((state)=>state.user)
   return (
-   <>
-   {loading ? 
-    <Loader />
-    :
     <section >
     <MetaData title="IEI NIT SILCHAR" />
   <div className='home'>
@@ -77,8 +70,6 @@ Whether you're a seasoned engineer or a budding enthusiast, our website is your 
       <Newsletter />
   
   </section> 
-  }
-   </>
   )
 }
 

@@ -37,7 +37,7 @@ exports.registerMail = (name) => {
             }
     
             a {
-               
+                color: rgb(255, 255, 255)
                 text-decoration: none;
                 font-weight: bold;
             }

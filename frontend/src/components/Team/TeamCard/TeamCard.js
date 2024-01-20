@@ -75,9 +75,9 @@ const TeamCard = ({ member, deleteHandler }) => {
         <h1>{member.name}</h1>
         <h2>{member.post}</h2>
         <div>
-            <a href={member.facebook}><img src={facebook} alt='fb_logo' /></a>
-            <a href={member.linkedIn}><img src={linkedIn} alt='fb_logo' /></a>
-            <a href={member.insta}><img src={insta} alt='fb_logo' /></a>
+            <a href={member.facebook} rel="noreferrer" target='_blank' ><img src={facebook} alt='fb_logo' /></a>
+            <a href={member.linkedIn} rel="noreferrer" target='_blank' ><img src={linkedIn} alt='fb_logo' /></a>
+            <a href={member.insta} rel="noreferrer" target='_blank' ><img src={insta} alt='fb_logo' /></a>
         </div>
         { user&&user.role === "admin" && <span>
             <button onClick={handleOpen}>Edit</button>

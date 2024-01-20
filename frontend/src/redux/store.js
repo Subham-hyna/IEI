@@ -17,6 +17,6 @@ const store = configureStore({
   
   export default store;
   
-  export const server = "https://iei-server.onrender.com/api/v1";
+  export const server = "https://iei-server.vercel.app/api/v1";
 
   //BUILDED BY SUBHAM-HYNA @https://github.com/Subham-hyna

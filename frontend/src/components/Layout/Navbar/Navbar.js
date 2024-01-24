@@ -11,9 +11,15 @@ import Button from '@mui/material/Button';
 const Navbar = ({ isAuthenticated , user }) => {
 
     const[mobileMenu, setMobileMenu] = useState(false);
+
+    const handleClose = () => {
+        if(mobileMenu){
+            setMobileMenu(false)
+        }
+    }
     
   return (
-    <nav className='n-wrapper'>
+    <nav className='n-wrapper' onClick={handleClose}>
         <div className='n-left'>
         <Link to='/' ><img alt="IEI_logo" src={logo} size = 'lg' className='n-logo'/></Link>
         </div>

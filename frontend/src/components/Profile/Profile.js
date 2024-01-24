@@ -25,6 +25,11 @@ const Profile = () => {
         setMobileProfileMenu(false);
     }
 
+    const handleClose = () => {
+        if(mobileProfileMenu){
+            setMobileProfileMenu(false)
+        }
+    }
 
     const logoutHandler = () => {
         dispatch(logout());
@@ -33,7 +38,7 @@ const Profile = () => {
     }
 
   return (
-    <section className='profile'>
+    <section className='profile' onClick={handleClose}>
         <MetaData title="MY PROFILE" />
         <div className='p-main'>
             <div className='p-left' style={{left: mobileProfileMenu ? '0px' : ''}}>

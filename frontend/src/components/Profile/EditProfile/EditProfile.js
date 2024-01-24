@@ -11,10 +11,10 @@ const EditProfile = () => {
   const { error, isUpdated, user, loading } = useSelector((state)=>state.user);
 
   const [name , setName] = useState(user.name);
-  const [semester , setSemester] = useState(user.semester);
-  const [department , setDepartment] = useState(user.department);
-  const [year , setYear] = useState(user.year);
-  const [institute , setInstitute] = useState(user.institute);
+  const [semester , setSemester] = useState(user.semester?user.semester:"");
+  const [department , setDepartment] = useState(user.department?user.department:"");
+  const [year , setYear] = useState(user.year?user.year:"");
+  const [institute , setInstitute] = useState(user.institute?user.institute:"");
 
   const dispatch = useDispatch();
 

@@ -24,9 +24,9 @@ const Footer = () => {
           <div className="f-social">
             <span>FOLLOW US ON</span>
             <div>
-            <a href="iei"><img src={insta} alt="insta_logo"/></a>
-            <a href="iei"><img src={facebook} alt="facebook_logo"/></a>
-            <a href="iei"><img src={linkedin} alt="linkedin_logo"/></a>
+            <a href="https://www.instagram.com/iei.nitsilchar" rel="noreferrer" target="_blank"><img src={insta} alt="insta_logo"/></a>
+            <a href="https://www.facebook.com/iei.nitsilchar" rel="noreferrer" target="_blank"><img src={facebook} alt="facebook_logo"/></a>
+            <a href="https://www.linkedin.com/company/iei-nitsilchar" rel="noreferrer" target="_blank"><img src={linkedin} alt="linkedin_logo"/></a>
             </div>
           </div>
         </div>
@@ -36,15 +36,15 @@ const Footer = () => {
                <div>
                <div>
                     <EmailRoundedIcon />
-                    <p>subhamdutta460@gmail.com</p>
+                    <p>iei.nitsilchar@gmail.com</p>
                 </div>
                 <div>
                     <LocalPhoneRoundedIcon />
-                    <p>9365765523</p>
+                    <p>7800748553</p>
                 </div>
                 <div>
                     <LocalPhoneRoundedIcon />
-                    <p>9365765523</p>
+                    <p>9310581406</p>
                 </div>
                 <div>
                     <BusinessRoundedIcon />

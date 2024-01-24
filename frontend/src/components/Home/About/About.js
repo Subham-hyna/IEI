@@ -48,13 +48,13 @@ const About = () => {
                 </div>
                 <div>
                 <SwiperSlide>
-                <img src= "https://res.cloudinary.com/ddr1kuyb3/image/upload/v1704184396/aiony-haust-3TLl_97HNJo-unsplash_nolun5.jpg" alt='Pesident' />
+                <img src= "https://res.cloudinary.com/dl71curl8/image/upload/v1706030935/avatars/WhatsApp_Image_2024-01-23_at_21.44.08_w5nvey.jpg" alt='Pesident' />
                 <p>President</p>
                 </SwiperSlide>
                 </div>
                 <div>
                 <SwiperSlide>
-                <img src= "https://res.cloudinary.com/ddr1kuyb3/image/upload/v1704184396/aiony-haust-3TLl_97HNJo-unsplash_nolun5.jpg" alt='GS' />
+                <img src= "https://res.cloudinary.com/dl71curl8/image/upload/v1706096969/avatars/pp_glz4kw.jpg" alt='GS' />
                 <p>General Secretary</p>
                 </SwiperSlide>
                 </div>

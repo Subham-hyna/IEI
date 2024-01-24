@@ -3,13 +3,13 @@ import "./Contact.css";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
-import Tilt from 'react-parallax-tilt'
 import { motion } from 'framer-motion'
 import {toast} from "react-hot-toast";
 import MetaData from "../Layout/MetaData";
 import { useDispatch, useSelector } from "react-redux";
 import { clearErrors, clearMessages, contactUs } from "../../redux/actions/mailAction";
 import { contactReset } from "../../redux/reducers/mailReducer";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
@@ -25,13 +25,13 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // emailjs.sendForm('service_bjwh3pw', 'template_0vhor0h', form.current, 'qXyZfGBeFdpegHycE')
-    //   .then((result) => {
-    //       console.log(result.text);
-    //       setDone(true);
-    //   }, (err) => {
-    //       toast.error(err);
-    //   });
+    emailjs.sendForm('service_my8frrc', 'template_dhcmoal', form.current, 'l9h_6jUszy3UD5wTb')
+      .then((result) => {
+          console.log(result.text);
+          setDone(true);
+      }, (err) => {
+          toast.error(err);
+      });
 
     const formData = new FormData();
 
@@ -61,10 +61,7 @@ const Contact = () => {
       <div className="contact-upper">
         <h1>Contact Us</h1>
         <p>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content
+        Our team is ever-ready to assist you and solve your queries.We are here to assist you! Thank you for showing interest in our organization. For any inquiries, feedback, or support, please feel free to reach out to us. You may use the contact form below to send us a message. We aim to respond promptly.
         </p>
       </div>
       <div className="contact-lower">
@@ -93,7 +90,7 @@ const Contact = () => {
             </i>
             <div>
               <h2>Phone</h2>
-              <h3>93657-65523</h3>
+              <h3>78007-48553</h3>
             </div>
           </div>
           <div>
@@ -102,11 +99,11 @@ const Contact = () => {
             </i>
             <div>
               <h2>Email</h2>
-              <h3>subhamdutta460@gmail.com</h3>
+              <h3>iei.nitsilchar@gmail.com</h3>
             </div>
           </div>
         </motion.div>
-        <Tilt><motion.div 
+        <motion.div 
              initial={{
                 x: "-100%",
                 opacity: 0,
@@ -124,6 +121,7 @@ const Contact = () => {
               <label>Name</label>
               <input
                 type="text"
+                name="name"
                 placeholder="Enter Your Name"
                 onChange={(e)=>setName(e.target.value)}
               />
@@ -132,6 +130,7 @@ const Contact = () => {
               <label>Email</label>
               <input
                 type="email"
+                name="email"
                 placeholder="Enter Your Email"
                 onChange={(e)=>setEmail(e.target.value)}
                 />
@@ -139,6 +138,7 @@ const Contact = () => {
             <div>
               <label>Message</label>
               <textarea
+              name="query"
               placeholder="Write Your Message"
               onChange={(e)=>setQuery(e.target.value)}
               >
@@ -149,7 +149,6 @@ const Contact = () => {
             </div>
           </form>
         </motion.div>
-        </Tilt>
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import './EventDetails.css'
-import { Modal } from '@mui/material';
 import DeleteIcon from "@mui/icons-material/Delete";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -11,10 +10,6 @@ import { deleteEventPhotoReset } from '../../../redux/reducers/eventReducer';
 import MetaData from '../../Layout/MetaData';
 
 const EventDetails = () => {
-    const [open, setOpen] = React.useState(false);
-    
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
 
     const { user } = useSelector((state)=>state.user);
     const { loading , event, error, isDeleted } = useSelector((state)=>state.event);
@@ -80,20 +75,12 @@ const EventDetails = () => {
             { event&&event.photos.length > 0 ?
                 event.photos.map((photo)=>(
                     <div>
-                        <img src={photo.url} alt={event.title} onClick={handleOpen} />
+                        <img src={photo.url} alt={event.title} />
                         {user&&user.role === "admin" && (
                             <i>
                         <DeleteIcon onClick={()=>deleteHandler(photo.public_id)} />
                         </i>
                         )}
-                        <Modal
-                        open={open}
-                        onClose={handleClose}
-                        >
-                        <div className="gallery-card-modal">
-                        <img src={photo.url} alt={photo.public_id} />
-                    </div>
-                    </Modal>
                     </div>
                 ))
             :

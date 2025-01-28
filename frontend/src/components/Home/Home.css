@@ -1,95 +1,149 @@
-.home{
+.home {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 150px;
+    padding-top: 60px;
+    padding-bottom: 100px;
     position: relative;
     background-image: url("../../assets/homebg.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 0 auto;
+    margin: 30px 0 auto;
 }
 
-.h-title>h1{
+.h-title>h1 {
     font-size: 69px;
     font-family: 'Roboto Slab', serif;
-    margin: 0 0 40px 0;
+    margin: 0 0 20px 0;
     color: #3e3d3d;
     letter-spacing: 5px;
 }
 
-.h-content>h4{
+.h-content>h4 {
     font-size: 20px;
     color: #786a99;
     margin: 0 0 35px 0;
     font-family: 'Roboto', sans-serif;
 }
 
-.h-content>p{
+.h-content>p {
     line-height: 1.9;
     margin-bottom: 60px;
     color: #666666;
 }
 
-.h-button{
+.h-button {
     margin-bottom: 50px;
 }
 
-.h-arrow{
-    animation: updown 3s linear infinite;
+.h-arrow {
+    display: block;
+    animation: bounceImpact 2s ease-out infinite;
     margin-top: 30px;
 }
 
-.h-icon{
+.h-icon {
     position: absolute;
     width: 400px;
-    left: 100px;
-    bottom: 25px;
-    filter: drop-shadow(18px 42px 70px #1453bea5);
+    right: 100px;
+    bottom: 50px;
     animation: sliderotate 5s linear infinite;
 }
 
-@keyframes updown {
+@keyframes bounceImpact {
     0% {
-        transform: translateY(-10px);
+        transform: translateY(0) scaleX(1) scaleY(1);
+        /* Initial state */
     }
+
+    20% {
+        transform: translateY(-20px) scaleX(1) scaleY(1);
+        /* Big bounce up */
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    40% {
+        transform: translateY(10px) scaleX(1.2) scaleY(0.8);
+        /* Impact squash */
+        animation-timing-function: cubic-bezier(0.2, 1, 0.4, 1);
+    }
+
     50% {
-        transform: translateY(10px);
+        transform: translateY(0) scaleX(1) scaleY(1);
+        /* Reset to normal */
     }
+
+    60% {
+        transform: translateY(-10px) scaleX(1) scaleY(1);
+        /* Smaller bounce up */
+    }
+
+    80% {
+        transform: translateY(5px) scaleX(1.1) scaleY(0.9);
+        /* Smaller impact */
+    }
+
     100% {
-        transform: translateY(-10px);
+        transform: translateY(0) scaleX(1) scaleY(1);
+        /* Settle back */
     }
 }
+
+
 
 @keyframes sliderotate {
     0% {
         transform: rotate(0deg);
     }
+
+    12.5% {
+        transform: rotate(1.5deg);
+    }
+
     25% {
         transform: rotate(3deg);
     }
+
+    37.5% {
+        transform: rotate(1.5deg);
+    }
+
     50% {
         transform: rotate(0deg);
     }
-    100% {
+
+    62.5% {
+        transform: rotate(-1.5deg);
+    }
+
+    75% {
         transform: rotate(-3deg);
+    }
+
+    87.5% {
+        transform: rotate(-1.5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
     }
 }
 
+
 @media screen and (max-width : 1500px) {
-    
-    .home{
-        padding : 200px 100px 100px 100px;
+
+    .home {
+        padding: 200px 100px 100px 100px;
     }
 
-    .h-title>h1{
-        font-size : 65px;
+    .h-title>h1 {
+        font-size: 65px;
     }
 
-    .h-icon{
+    .h-icon {
         width: 382px;
         left: 65px;
         bottom: 22px;
@@ -98,18 +152,19 @@
 
 @media screen and (max-width : 1250px) {
 
-    .home{
-        padding : 150px 50px 50px 50px;
-    }
-    .h-title>h1{
-        font-size : 50px;
+    .home {
+        padding: 150px 50px 50px 50px;
     }
 
-    .h-content>h4{
+    .h-title>h1 {
+        font-size: 50px;
+    }
+
+    .h-content>h4 {
         font-size: 20px;
     }
 
-    .h-icon{
+    .h-icon {
         width: 363px;
         left: 58px;
         bottom: 16px;
@@ -118,18 +173,19 @@
 
 @media screen and (max-width : 950px) {
 
-    .home{
-        padding : 100px 30px 30px 30px;
-    }
-    .h-title>h1{
-        font-size : 45px;
+    .home {
+        padding: 100px 30px 30px 30px;
     }
 
-    .h-content>h4{
+    .h-title>h1 {
+        font-size: 45px;
+    }
+
+    .h-content>h4 {
         font-size: 18px;
     }
 
-    .h-icon{
+    .h-icon {
         width: 294px;
         left: 12px;
         bottom: 16px;
@@ -138,59 +194,62 @@
 
 @media screen and (max-width : 750px) {
 
-    .home{
-        padding : 80px 30px 30px 30px;
-    }
-    .h-title>h1{
-        font-size : 45px;
+    .home {
+        padding: 80px 30px 30px 30px;
     }
 
-    .h-content>h4{
+    .h-title>h1 {
+        font-size: 45px;
+    }
+
+    .h-content>h4 {
         font-size: 16px;
         margin-bottom: 20px;
     }
 
-    .h-content>p{
+    .h-content>p {
         font-size: 12px;
     }
 
-    .h-icon{
+    .h-icon {
         display: none;
     }
 }
 
 @media screen and (max-width : 550px) {
 
-    .home{
-        padding : 50px 20px 20px 20px;
-    }
-    .h-title>h1{
-        font-size : 40px;
+    .home {
+        padding: 50px 20px 20px 20px;
     }
 
-    .h-content>h4{
+    .h-title>h1 {
+        font-size: 40px;
+    }
+
+    .h-content>h4 {
         font-size: 14px;
     }
 
-    .h-content>p{
+    .h-content>p {
         font-size: 11px;
     }
 }
 
 @media screen and (max-width : 400px) {
 
-    .home{
-        padding : 20px 20px 20px 20px;
-    }
-    .h-title>h1{
-        font-size : 30px;
+    .home {
+        padding: 20px 20px 20px 20px;
     }
 
-    .h-content>h4{
+    .h-title>h1 {
+        font-size: 30px;
+    }
+
+    .h-content>h4 {
         font-size: 12px;
     }
 
-    .h-content>p{
+    .h-content>p {
         font-size: 11px;
     }
 }

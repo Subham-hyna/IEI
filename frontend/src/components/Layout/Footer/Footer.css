@@ -1,4 +1,4 @@
-.footer{
+.footer {
     display: flex;
     flex-direction: column;
 }
@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #353535;
+    background-color: #4329b3;
     color: #ffffffed;
     padding: 27px 3vw;
     gap: 10vw;
@@ -43,12 +43,12 @@
 
 .f-company>div>h3 {
     font-size: 31px;
-    font-family: "Roboto" , sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .f-company>p {
     font-size: 14px;
-    font-family: "Roboto" , sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .f-social {
@@ -62,7 +62,7 @@
 
 .f-social>span {
     font-size: 24px;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 600;
 }
 
@@ -94,7 +94,7 @@
 
 .f-contact>span {
     font-size: 24px;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 600;
 }
 
@@ -114,7 +114,7 @@
 
 .f-contact>div>div>p {
     font-size: 14px;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .f-quick {
@@ -139,72 +139,86 @@
 .f-quick>ul>li>a {
     color: whitesmoke;
     font-size: 14px;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
 }
 
-.f-lower{
+.f-lower {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: #565656;
+    background-color: #2c1984;
 }
 
-.f-lower>p{
+.f-lower>p {
     font-size: 15px;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     color: white;
 }
 
+.icon:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
 @media screen and (max-width: 1250px) {
-    .f-left{
+    .f-left {
         flex-direction: column;
         align-items: flex-start;
         gap: 80px;
     }
-    .f-company{
+
+    .f-company {
         width: 378px;
     }
-    .f-right{
+
+    .f-right {
         flex-direction: column;
         align-items: flex-start;
         gap: 32px;
     }
-    .f-contact{
+
+    .f-contact {
         gap: 22px;
     }
-    .f-quicks{
+
+    .f-quicks {
         gap: 22px;
     }
 
 }
 
-@media screen and (max-width: 700px){
-    .f-upper{
+@media screen and (max-width: 700px) {
+    .f-upper {
         flex-direction: column;
         align-items: flex-start;
     }
 }
 
-@media screen and (max-width: 420px){
-    .f-left{
+@media screen and (max-width: 420px) {
+    .f-left {
         gap: 60px;
     }
-    .f-company{
+
+    .f-company {
         width: 80vw;
     }
-    .f-company>div>h3{
+
+    .f-company>div>h3 {
         font-size: 28px;
     }
-    .f-company>div>p{
+
+    .f-company>div>p {
         font-size: 12px;
     }
-    .f-left{
+
+    .f-left {
         width: 80vw;
     }
-    .f-right{
+
+    .f-right {
         width: 90vw;
     }
 }

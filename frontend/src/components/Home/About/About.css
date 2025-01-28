@@ -1,9 +1,9 @@
-.about{
+.about {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    padding: 50px 50px 50px 10px;
+    padding-top: 60px;
     background: url(../../../assets/aboutbg.jpg);
     background-position: center;
     background-size: cover;
@@ -11,29 +11,37 @@
     scroll-behavior: smooth;
 }
 
+.x {
+    font-size: 5rem;
+    color: #5c20a1
+}
+
+
+
 .about-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     order: 1;
     width: 60vw;
 }
 
-.about-left>img{
+.about-left>img {
     width: 239px;
     height: 239px;
 }
 
-.about-left>div{
+.about-left>div {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 60vw;
+    padding-bottom: 10px;
 }
 
-.about-left>div>div>div>div{
+.about-left>div>div>div>div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,7 +63,7 @@
     font-weight: bolder;
 }
 
-.about-right{
+.about-right {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -68,11 +76,11 @@
     font-size: 32px;
     letter-spacing: 2px;
     font-weight: 400;
-    font-family: "Roboto" ,sans-serif;
+    font-family: "Roboto", sans-serif;
     position: relative;
 }
 
-.about-right>span::after{
+.about-right>span::after {
     content: '';
     position: absolute;
     left: 0;
@@ -88,7 +96,7 @@
     color: #3f0a79;
     letter-spacing: 1.05px;
     font-weight: 200;
-    font-family: "Roboto Slab",sans-serif;
+    font-family: "Roboto Slab", sans-serif;
 }
 
 .about-right>h3 {
@@ -104,104 +112,158 @@
     color: #585757;
 }
 
-@media screen and (max-width: 1250px){
-    .about{
+@media screen and (max-width: 1250px) {
+    .about {
         padding: 50px 20px 50px 10px;
     }
-    .about-left{
+
+    .about-left {
         gap: 70px;
     }
-    .about-left>img{
+
+    .about-left>img {
         width: 200px;
         height: 200px;
     }
-    .about-left>div>div>div>div>img{
+
+    .about-left>div>div>div>div>img {
         width: 159px;
         height: 186px;
     }
-    .about-left>div>div>div>div>p{
+
+    .about-left>div>div>div>div>p {
         font-size: 15px;
     }
-    .about-right>span{
+
+    .about-right>span {
         font-size: 28px;
     }
-    .about-right>h1{
+
+    .about-right>h1 {
         font-size: 38px;
     }
-    .about-right>h3{
+
+    .about-right>h3 {
         font-size: 12px;
         letter-spacing: 4px;
     }
-    .about-right>p{
+
+    .about-right>p {
         font-size: 12px;
+    }
+
+    .x {
+        font-size: 3rem;
+    }
+
+    .logo {
+        width: 250px;
+        height: 250px;
+    }
+
+    .nit {
+        width: 250px;
+        height: 250px;
     }
 }
 
-@media screen and (max-width:950px){
-    .about{
+@media screen and (max-width:950px) {
+    .about {
         flex-direction: column;
         padding: 50px 70px;
         gap: 60px;
     }
-    .about-left{
+
+    .about-left {
         order: 2;
         width: 100%;
     }
-    .about-left>img{
+
+    .about-left>img {
         display: none;
     }
-    .about-left>div{
+
+    .about-left>div {
         width: 90vw;
     }
 
-.about-swiper{
-    width: 90vw !important;
-}
-    .about-left>div>div>div>div>img{
+    .about-swiper {
+        width: 90vw !important;
+    }
+
+    .about-left>div>div>div>div>img {
         width: 184px;
         height: 214px;
     }
-    .about-right{
+
+    .about-right {
         order: 1;
         width: 100%;
     }
-    .about-right>span{
+
+    .about-right>span {
         font-size: 30px;
     }
-    .about-right>h1{
+
+    .about-right>h1 {
         font-size: 45px;
     }
-    .about-right>p{
+
+    .about-right>p {
         font-size: 14px;
     }
 }
 
-@media screen and (max-width:750px){
-    .about{
+@media screen and (max-width:750px) {
+    .about {
         flex-direction: column;
         padding: 50px 20px;
     }
+
     .about-left>div {
         overflow-x: scroll;
-        justify-content: flex-start;
         gap: 25px;
     }
-    .about-right>h1{
+
+    .about-right>h1 {
         font-size: 41px;
     }
-} 
 
-@media screen and (max-width: 450px){
-    .about-right>span{
+    .nit {
+        width: 150px;
+        height: 150px;
+    }
+
+    .logo {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .about-right>span {
         font-size: 28px;
     }
-    .about-right>h1{
+
+    .about-right>h1 {
         font-size: 33px;
     }
-    .about-right>h3{
+
+    .about-right>h3 {
         letter-spacing: 3px;
     }
-    .about-right>p{
+
+    .about-right>p {
         font-size: 12px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .nit {
+        width: 100px;
+        height: 100px;
     }
 }

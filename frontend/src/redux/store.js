@@ -17,6 +17,6 @@ const store = configureStore({
 
 export default store;
 
-export const server = "http://localhost:4000/api/v1";
+export const server = "https://iei-server.onrender.com/api/v1";
 
 //BUILDED BY SUBHAM-HYNA @https://github.com/Subham-hyna

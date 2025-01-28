@@ -13,7 +13,9 @@ process.on("uncaughtException", (err) => {
 connectDatabase();
 
 const server = app.listen(process.env.PORT, () => {
-  console.log(`Server is working on port ${process.env.PORT} in ${process.env.NODE_ENV} mode`);
+  console.log(
+    `Server is working on port ${process.env.PORT} in ${process.env.NODE_ENV} mode`
+  );
 });
 
 // Unhandled Promise Rejection
@@ -25,6 +27,5 @@ process.on("unhandledRejection", (err) => {
     process.exit(1);
   });
 });
-
 
 //BUILDED BY SUBHAM-HYNA @https://github.com/Subham-hyna

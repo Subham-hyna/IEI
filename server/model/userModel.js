@@ -4,63 +4,65 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 
-const userSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    trim: true,
-    required: [true, "Please Enter Your Name"],
-    maxLength: [30, "Name cannot exceed 30 characters"],
-    minLength: [4, "Name should have more than 4 characters"],
-  },
-  email: {
-    type: String,
-    unique: true,
-    required: [true, "Please Enter Your Email"],
-    validate: [validator.isEmail, "Please Enter a valid Email"],
-  },
-  phone: {
-    type : Number,
-    required: [true, "Please Enter Your Phone Number"]
-  },
-  year:{
-    type : String,
-  },
-  semester:{
-    type : String,
-  },
-  department:{
-    type : String,
-  },
-  institute:{
-    type : String,
-  },
-  password: {
-    type: String,
-    required: [true, "Please Enter Your Password"],
-    minLength: [8, "Password should be greater than 8 characters"],
-    select: false,
-  },
-  avatar: {
-    public_id: {
+const userSchema = new mongoose.Schema(
+  {
+    name: {
       type: String,
-      required: true,
+      trim: true,
+      required: [true, "Please Enter Your Name"],
+      maxLength: [30, "Name cannot exceed 30 characters"],
+      minLength: [4, "Name should have more than 4 characters"],
     },
-    url: {
+    email: {
       type: String,
-      required: true,
+      unique: true,
+      required: [true, "Please Enter Your Email"],
+      validate: [validator.isEmail, "Please Enter a valid Email"],
     },
-  },
-  role: {
-    type: String,
-    default: "user",
-  },
+    phone: {
+      type: Number,
+      required: [true, "Please Enter Your Phone Number"],
+    },
+    year: {
+      type: String,
+    },
+    semester: {
+      type: String,
+    },
+    department: {
+      type: String,
+    },
+    institute: {
+      type: String,
+    },
+    password: {
+      type: String,
+      required: [true, "Please Enter Your Password"],
+      minLength: [8, "Password should be greater than 8 characters"],
+      select: false,
+    },
+    avatar: {
+      public_id: {
+        type: String,
+        required: true,
+      },
+      url: {
+        type: String,
+        required: true,
+      },
+    },
+    role: {
+      type: String,
+      default: "user",
+    },
 
-  resetPasswordToken: String,
-  resetPasswordExpire: Date,
-},
-{
-    timestamps : true
-});
+    resetPasswordToken: String,
+    resetPasswordExpire: Date,
+  },
+  {
+    timestamps: true,
+  }
+);
 
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) {
@@ -72,7 +74,7 @@ userSchema.pre("save", async function (next) {
 
 // JWT TOKEN
 userSchema.methods.getJWTToken = function () {
-  return jwt.sign({_id: this._id }, process.env.JWT_SECRET, {
+  return jwt.sign({ _id: this._id }, process.env.JWT_SECRET, {
     expiresIn: process.env.JWT_EXPIRE,
   });
 };
@@ -100,6 +102,5 @@ userSchema.methods.getResetPasswordToken = function () {
 };
 
 module.exports = mongoose.model("User", userSchema);
-
 
 //BUILDED BY SUBHAM-HYNA @https://github.com/Subham-hyna

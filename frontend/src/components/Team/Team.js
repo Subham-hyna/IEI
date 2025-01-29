@@ -14,9 +14,19 @@ import { clearErrors, clearMessages, createMember, deleteTeam, getTeam } from ".
 import {toast} from "react-hot-toast";
 import { deleteTeamReset, newTeamReset } from "../../redux/reducers/teamReducer";
 import MetaData from "../Layout/MetaData";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { 
+  TextField, 
+  Button, 
+  CircularProgress, 
+} from "@mui/material";
 
 const Team = () => {
-  const [year, setYear] = useState("23");
+  const [year, setYear] = useState("24");
   const [open, setOpen] = useState(false);
   const [name , setName] = useState();
   const [post , setPost] = useState();
@@ -101,80 +111,87 @@ const Team = () => {
       <div className="t-upper">
         <span>Unity, Vision, Impact, Success</span>
         { user && user.role === "admin" &&<button onClick={handleOpen}>Add Member</button>}
-        <Modal
-        open={open}
-        onClose={handleClose}
-      >
-        <form className='add-member'>
-      <div>
-      <label>Name</label>
-      <div>
-          <input type='text' value={name} placeholder='Enter Member Name' onChange={(e)=>(setName(e.target.value))}/>
-      </div>
-      </div>
-      <div>
-      <label>Post</label>
-      <div>
-          <input type='text' value={post} placeholder='Enter Member Post' onChange={(e)=>(setPost(e.target.value))}/>
-      </div>
-      </div>
-      <div>
-      <label>Member Year</label>
-      <div>
-          <select value={memberYear} onChange={(e)=>(setMemberYear(e.target.value))}>
-            <option value="" >Set Member Year</option>
-            <option value="1" >1st</option>
-            <option value="2" >2nd</option>
-            <option value="3" >3rd</option>
-            <option value="4" >4th</option>
-            <option value="5" >FIC</option>
-          </select>
-      </div>
-      </div>
-      <div>
-      <label>Financial Year</label>
-      <div>
-          <select value={fy} onChange={(e)=>(setFy(e.target.value))}>
-            <option value="" >Set Financial Year</option>
-            <option value="22" >2022-23</option>
-            <option value="23" >2023-24 </option>
-            <option value="24" >2024-25</option>
-          </select>
-      </div>
-      </div>
-      <div>
-      <label>Facebook Link</label>
-      <div>
-          <input type='text' value={fblink} placeholder='Enter Member facebook link' onChange={(e)=>(setFblink(e.target.value))}/>
-      </div>
-      </div>
-      <div>
-      <label>Instagram Link</label>
-      <div>
-          <input type='text' value={instalink} placeholder='Enter Member insta link' onChange={(e)=>(setInsta(e.target.value))}/>
-      </div>
-      </div>
-      <div>
-      <label>LinkedIn Link</label>
-      <div>
-          <input type='text' value={linkedInlink} placeholder='Enter Member linkedIn link' onChange={(e)=>(setLinkedIn(e.target.value))}/>
-      </div>
-      </div>
-      <div>
-      <label>Choose Profile Photo</label>
-      <div>
-          <input type='file' 
-            accept="image/*"
-            onChange={(e) => setImage(e.target.files[0])}
-          />
-      </div>
-      </div>
-      <div>
-          <button type='submit' onClick={newTeamHandler} >{buttonLoading ? <div className='button-loader'></div> : "ADD"}</button>
-      </div>
+        <Modal open={open} onClose={handleClose}>
+  <div className="add-member-container">
+    <h2>Add New Team Member</h2>
+    <form className="add-member-form" onSubmit={newTeamHandler}>
+      
+      <TextField
+        label="Name"
+        variant="outlined"
+        fullWidth
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        required
+      />
+
+      <TextField
+        label="Post"
+        variant="outlined"
+        fullWidth
+        value={post}
+        onChange={(e) => setPost(e.target.value)}
+        required
+      />
+
+      <FormControl fullWidth>
+        <InputLabel>Member Year</InputLabel>
+        <Select value={memberYear} onChange={(e) => setMemberYear(e.target.value)} required>
+          <MenuItem value="1">1st</MenuItem>
+          <MenuItem value="2">2nd</MenuItem>
+          <MenuItem value="3">3rd</MenuItem>
+          <MenuItem value="4">4th</MenuItem>
+          <MenuItem value="5">FIC</MenuItem>
+        </Select>
+      </FormControl>
+
+      <FormControl fullWidth>
+        <InputLabel>Financial Year</InputLabel>
+        <Select value={fy} onChange={(e) => setFy(e.target.value)} required>
+          <MenuItem value="22">2022-23</MenuItem>
+          <MenuItem value="23">2023-24</MenuItem>
+          <MenuItem value="24">2024-25</MenuItem>
+        </Select>
+      </FormControl>
+
+      <TextField
+        label="Facebook Link"
+        variant="outlined"
+        fullWidth
+        value={fblink}
+        onChange={(e) => setFblink(e.target.value)}
+      />
+
+      <TextField
+        label="Instagram Link"
+        variant="outlined"
+        fullWidth
+        value={instalink}
+        onChange={(e) => setInsta(e.target.value)}
+      />
+
+      <TextField
+        label="LinkedIn Link"
+        variant="outlined"
+        fullWidth
+        value={linkedInlink}
+        onChange={(e) => setLinkedIn(e.target.value)}
+      />
+
+      <Button variant="contained" component="label">
+        Upload Profile Photo
+        <input type="file" hidden accept="image/*" onChange={(e) => setImage(e.target.files[0])} />
+      </Button>
+
+      <Button type="submit" variant="contained" color="primary" fullWidth>
+        {buttonLoading ? <CircularProgress size={24} /> : "Add Member"}
+      </Button>
+
     </form>
-      </Modal>
-        <div>
+  </div>
+</Modal>
+
+        <div className="year-dropdown">
             <FormControl>
               <InputLabel sx={{ color: "rgb(63 41 175)" , fontWeight : "500" , fontSize : "1.2rem"}} >Sort by Year</InputLabel>
               <Select
@@ -183,6 +200,7 @@ const Team = () => {
                 label="Sort by Year"
                 onChange={(e)=>{setYear(e.target.value)}}
               >
+                <MenuItem value="24">2024-25</MenuItem>
                 <MenuItem value="23">2023-24</MenuItem>
                 <MenuItem value="22">2022-23</MenuItem>
               </Select>
@@ -190,52 +208,115 @@ const Team = () => {
         </div>
       </div>
       <div className="t-lower">
-        <div>
-          <span>Core Members</span>
-          <div>
-          {fic.length > 0 ?
-            fic.map((f) => (
-                <Tilt><TeamCard key={f._id} member={f} deleteHandler={()=>deleteHandler(f._id)} /></Tilt>
-            ))
-            :
-            <p>No Members</p>}
-          </div>
-        </div>
-        <div>
-          <span>4th Year Members</span>
-          <div>
-          {fourthYears.length > 0 ?
-            fourthYears.map((f) => (
-              <Tilt><TeamCard key={f._id} member={f} deleteHandler={()=>deleteHandler(f._id)} /></Tilt>
-            ))
-          :
-          <p>No Members</p>
-          }
-          </div>
-        </div>
-        <div>
-          <span>3rd Year Members</span>
-          <div>
-          {thirdYears.length > 0 ?
-            thirdYears.map((f) => (
-              <Tilt><TeamCard key={f._id} member={f} deleteHandler={()=>deleteHandler(f._id)} /></Tilt>
-            ))
-            :
-            <p>No Members</p>}
-          </div>
-        </div>
-        <div>
-          <span>2nd Year Members</span>
-          <div>
-          {secondYears.length > 0 ?
-            secondYears.map((f) => (
-              <Tilt><TeamCard key={f._id} member={f} deleteHandler={()=>deleteHandler(f._id)} /></Tilt>
-            ))
-            :
-            <p>No Members</p>}
-          </div>
-        </div>
-      </div>
+  <div>
+    <span>Faculties</span>
+    <Swiper
+      slidesPerView={1}
+      centeredSlides={true}
+      loop={true}
+      spaceBetween={20}
+      grabCursor={true}
+      breakpoints={{
+        700: { slidesPerView: 2, spaceBetween: 10 },
+        1024: { slidesPerView: 3, spaceBetween: 30 },
+      }}
+      autoplay={{ delay: 3000 }}
+      navigation={true}
+      modules={[Autoplay, Pagination, Navigation]}
+      className="team-swiper"
+    >
+      {fic.length > 0 ? fic.map((f) => (
+        <SwiperSlide key={f._id}>
+          <Tilt>
+            <TeamCard member={f} deleteHandler={() => deleteHandler(f._id)} />
+          </Tilt>
+        </SwiperSlide>
+      )) : <p>No Members</p>}
+    </Swiper>
+  </div>
+
+  <div>
+    <span>4th Year Members</span>
+    <Swiper
+    centeredSlides={true}
+      slidesPerView={1}
+      loop={true}
+      spaceBetween={20}
+      grabCursor={true}
+      breakpoints={{
+        700: { slidesPerView: 2, spaceBetween: 10 },
+        1024: { slidesPerView: 3, spaceBetween: 30 },
+      }}
+      autoplay={{ delay: 3000 }}
+      navigation={true}
+      modules={[Autoplay, Pagination, Navigation]}
+      className="team-swiper"
+    >
+      {fourthYears.length > 0 ? fourthYears.map((f) => (
+        <SwiperSlide key={f._id}>
+          <Tilt>
+            <TeamCard member={f} deleteHandler={() => deleteHandler(f._id)} />
+          </Tilt>
+        </SwiperSlide>
+      )) : <p>No Members</p>}
+    </Swiper>
+  </div>
+
+  <div>
+    <span>3rd Year Members</span>
+    <Swiper
+    centeredSlides={true}
+      slidesPerView={1}
+      loop={true}
+      spaceBetween={20}
+      grabCursor={true}
+      breakpoints={{
+        700: { slidesPerView: 2, spaceBetween: 10 },
+        1024: { slidesPerView: 3, spaceBetween: 30 },
+      }}
+      autoplay={{ delay: 3000 }}
+      navigation={true}
+      modules={[Autoplay, Pagination, Navigation]}
+      className="team-swiper"
+    >
+      {thirdYears.length > 0 ? thirdYears.map((f) => (
+        <SwiperSlide key={f._id}>
+          <Tilt>
+            <TeamCard member={f} deleteHandler={() => deleteHandler(f._id)} />
+          </Tilt>
+        </SwiperSlide>
+      )) : <p>No Members</p>}
+    </Swiper>
+  </div>
+
+  <div>
+    <span>2nd Year Members</span>
+    <Swiper
+    centeredSlides={true}
+      slidesPerView={1}
+      loop={true}
+      spaceBetween={20}
+      grabCursor={true}
+      breakpoints={{
+        700: { slidesPerView: 2, spaceBetween: 10 },
+        1024: { slidesPerView: 3, spaceBetween: 30 },
+      }}
+      autoplay={{ delay: 3000 }}
+      navigation={true}
+      modules={[Autoplay, Pagination, Navigation]}
+      className="team-swiper"
+    >
+      {secondYears.length > 0 ? secondYears.map((f) => (
+        <SwiperSlide key={f._id}>
+          <Tilt>
+            <TeamCard member={f} deleteHandler={() => deleteHandler(f._id)} />
+          </Tilt>
+        </SwiperSlide>
+      )) : <p>No Members</p>}
+    </Swiper>
+  </div>
+</div>
+
     </div>
     }
     </>

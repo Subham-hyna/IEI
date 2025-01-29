@@ -1,6 +1,6 @@
 .profile {
     background-color: #d1edff;
-    background: linear-gradient(to right , #e2e2e2 , #c9d6ff);
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -9,14 +9,14 @@
 }
 
 .p-main {
-  display: flex;
-  justify-content: flex-start;
-  gap: 20px;
-  background-color: #ffffff5e;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-  width: 70vw;
-  min-height: 70vh;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    background-color: #ffffff5e;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    width: 70vw;
+    min-height: 70vh;
 }
 
 .p-left {
@@ -25,13 +25,13 @@
 }
 
 .p-left>ul {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .p-left>ul>li {
     font-size: 18px;
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto", sans-serif;
     color: white;
     display: flex;
     align-items: center;
@@ -43,30 +43,27 @@
     position: relative;
 }
 
-.p-left>ul>li:last-child{
+.p-left>ul>li:last-child {
     border-bottom: 0px;
-} 
+}
 
-.p-left>ul>li:hover{
+.p-left>ul>li:hover {
     background-color: #6c3bb7;
 }
 
-.active-link{
-    background-color: #5923ac;
-}
 
-.p-right{
+.p-right {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.p-upper{
+.p-upper {
     display: flex;
     padding: 10px 0;
 }
 
-.p-arrow{
+.p-arrow {
     display: none;
 }
 
@@ -78,7 +75,7 @@
     position: relative;
 }
 
-.p-upper>span::after{
+.p-upper>span::after {
     content: '';
     position: absolute;
     left: 0;
@@ -89,20 +86,20 @@
     background-color: #8269ec;
 }
 
-@media screen and (max-width : 1050px){
-    
+@media screen and (max-width : 1050px) {
+
     .profile {
         padding: 50px;
     }
 
-    .p-main{
+    .p-main {
         width: 80vw;
     }
 
 
     .p-left>ul>li {
         font-size: 14px;
-        font-family: "Roboto",sans-serif;
+        font-family: "Roboto", sans-serif;
         color: white;
         display: flex;
         align-items: center;
@@ -113,17 +110,17 @@
     }
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 750px) {
 
-    .profile{
+    .profile {
         align-items: flex-start;
     }
 
-    .p-main{
+    .p-main {
         padding: 10px;
     }
 
-    .p-left{
+    .p-left {
         background: #9151cc;
         position: fixed;
         top: 0;
@@ -140,12 +137,12 @@
         width: 185px;
     }
 
-    .p-arrow{
+    .p-arrow {
         display: block;
         cursor: pointer;
     }
 
-    .p-upper{
+    .p-upper {
         gap: 10px;
     }
 

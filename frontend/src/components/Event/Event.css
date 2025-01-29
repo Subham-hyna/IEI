@@ -1,10 +1,11 @@
-.event{
+.event {
     display: flex;
     flex-direction: column;
     background-color: #d1edff;
-    background: linear-gradient(to right , #e2e2e2 , #c9d6ff);
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
     min-height: 100vh;
     gap: 30px;
+    margin-top: 50px;
 }
 
 .event-upper {
@@ -18,7 +19,7 @@
     align-items: center;
 }
 
-.event-upper::before {    
+.event-upper::before {
     content: "";
     background: url('../../assets/eventbg.jpeg');
     object-fit: contain;
@@ -34,28 +35,28 @@
     z-index: -1;
 }
 
-.event-upper>h1{
-    font-family: "Tenor" , sans-serif;
+.event-upper>h1 {
+    font-family: "Tenor", sans-serif;
     font-size: 40px;
     font-weight: 700;
     color: rgb(0, 0, 0);
 }
 
-.event-upper>div{
+.event-upper>div {
     position: absolute;
     right: 6vw;
     bottom: -88px;
 }
 
-.event-upper>div>div{
+.event-upper>div>div {
     background-color: #dbd8f740;
 }
 
-.event-upper>div>div>div>fieldset{
+.event-upper>div>div>div>fieldset {
     border-color: #6211a7b3;
 }
 
-.event-upper>div>div>div>svg{
+.event-upper>div>div>div>svg {
     right: 26px;
 }
 
@@ -72,16 +73,16 @@
 }
 
 .event-upper>form>input[type=text] {
-  background-color: #ffffffbd;
-  border: none;
-  color: black;
-  font-size: 16px;
-  font-weight: 400;
-  outline: none;
-  height: 38px;
-  width: 20vw;
-  border-radius: 5px;
-  padding: 0 10px;
+    background-color: #ffffffbd;
+    border: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    height: 38px;
+    width: 20vw;
+    border-radius: 5px;
+    padding: 0 10px;
 }
 
 .event-upper>form>button {
@@ -97,12 +98,12 @@
     padding: 10px 10px;
 }
 
-.event-upper>form>button:hover{
+.event-upper>form>button:hover {
     cursor: pointer;
     background-color: rgb(102, 41, 225);
 }
 
-.event-upper>button{
+.event-upper>button {
     background: #d91945;
     color: white;
     padding: 11px;
@@ -113,18 +114,18 @@
     margin: 0 auto;
     text-align: center;
     cursor: pointer;
-    font-family: "Roboto" , sans-serif;
+    font-family: "Roboto", sans-serif;
     border: none;
     position: absolute;
     left: 10vw;
     bottom: -88px;
 }
 
-.event-upper>button:hover{
-    background:red;
+.event-upper>button:hover {
+    background: red;
 }
 
-.event-lower{
+.event-lower {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,11 +134,11 @@
     padding: 0 0 30px 0;
 }
 
-.event-lower>h1{
+.event-lower>h1 {
     font-size: 40px;
     font-weight: 600;
     letter-spacing: 2px;
-    font-family: "Roboto" , sans-serif;
+    font-family: "Roboto", sans-serif;
     position: relative;
 }
 
@@ -150,7 +151,7 @@
     max-width: 67vw;
 }
 
-.event-lower>h1::after{
+.event-lower>h1::after {
     content: '';
     position: absolute;
     left: 0;
@@ -161,65 +162,79 @@
     background-color: #8269ec;
 }
 
-.event-lower>div>p{
+.event-lower>div>p {
     font-size: 18px;
 }
 
-@media screen and (max-width:1150px){
-    .event-upper{
+
+@media screen and (max-width:1150px) {
+    .event-upper {
         margin-bottom: 60px;
     }
-    .event-upper>h1{
+
+    .event-upper>h1 {
         font-size: 35px;
     }
+
     .event-upper>form>input[type=text] {
         width: 28vw;
     }
-    .event-upper>form>button{
+
+    .event-upper>form>button {
         width: 6vw;
     }
 }
 
-@media screen and (max-width:750px){
-    .event-upper{
+@media screen and (max-width:750px) {
+    .event-upper {
         margin-bottom: 100px;
     }
-    .event-upper>h1{
+
+    .event-upper>h1 {
         font-size: 27px;
     }
+
     .event-upper>form>input[type=text] {
         width: 44vw;
     }
-    .event-upper>form>button{
+
+    .event-upper>form>button {
         width: 11vw;
     }
-    .event-lower>h1{
+
+    .event-lower>h1 {
         font-size: 33px;
     }
-    .event-lower>div{
+
+    .event-lower>div {
         max-width: 85vw;
     }
 }
 
-@media screen and (max-width:450px){
-    .event-upper{
+@media screen and (max-width:450px) {
+    .event-upper {
         margin-bottom: 123px;
     }
-    .event-upper>h1{
+
+    .event-upper>h1 {
         font-size: 25px;
         text-align: center;
     }
-    .event-upper>form{
+
+    .event-upper>form {
         padding: 2px 16px;
     }
+
     .event-upper>form>input[type=text] {
         width: 45vw;
         font-size: 14px;
     }
-    .event-upper>form>button{
+
+    .event-upper>form>button {
         width: 16vw;
     }
-    .event-lower>h1{
+
+    .event-lower>h1 {
         font-size: 28px;
     }
 }

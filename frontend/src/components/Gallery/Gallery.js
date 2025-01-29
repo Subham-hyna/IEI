@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Gallery.css";
 import { Modal, Pagination } from "@mui/material";
+import { TextField, Button, CircularProgress } from "@mui/material";
 import GalleryCard from "./GalleryCard/GalleryCard";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from '../utils/Loader/Loader'
@@ -121,32 +122,34 @@ const {
         />
         <button onClick={handleSearch} >Go</button>
         <Modal open={open} onClose={handleClose}>
-          <form className="add-member">
-            <div>
-              <label>Title</label>
-              <div>
-                <input
-                  type="text"
-                  value={title}
-                  placeholder="Enter tags"
-                  onChange={(e) => setTitle(e.target.value)}
-                />
-              </div>
-            </div>
-            <div>
-              <label>Choose Profile Photo</label>
-              <div>
-                <input type="file"
-                accept="image/*"
-                onChange={(e) => setImage(e.target.files[0])}
-                />
-              </div>
-            </div>
-            <div>
-              <button onClick={newActivityHandler} >{buttonLoading ? <div className='button-loader'></div> : "Upload"}</button>
-            </div>
-          </form>
-        </Modal>
+    <form className="add-member" style={{ padding: "20px", background: "#fff", margin: "10% auto", maxWidth: "400px", borderRadius: "10px" }}>
+      <h2 style={{ textAlign: "center", marginBottom: "20px" }}>Add Photo</h2>
+
+      <TextField
+        fullWidth
+        variant="outlined"
+        label="Tags"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        sx={{ marginBottom: 2 }}
+      />
+
+      <Button variant="contained" component="label" fullWidth sx={{ marginBottom: 2 }}>
+        Choose Profile Photo
+        <input type="file" hidden accept="image/*" onChange={(e) => setImage(e.target.files[0])} />
+      </Button>
+
+      <Button
+        variant="contained"
+        color="success"
+        fullWidth
+        onClick={newActivityHandler}
+        disabled={buttonLoading}
+      >
+        {buttonLoading ? <CircularProgress size={24} color="inherit" /> : "Upload"}
+      </Button>
+    </form>
+  </Modal>
       </form>
       <span className="activities">
         {activities && activities.length > 0 ? (

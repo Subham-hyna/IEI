@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom"; // Import useLocation
 import "./Navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
@@ -15,8 +15,10 @@ import team from "../../../assets/teams.svg";
 import events from "../../../assets/events.svg";
 import contact from "../../../assets/contact.svg";
 import merch from "../../../assets/merch.svg";
+
 const Navbar = ({ isAuthenticated, user }) => {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const location = useLocation(); // Get current path
 
   const handleClose = () => {
     if (mobileMenu) {
@@ -35,20 +37,14 @@ const Navbar = ({ isAuthenticated, user }) => {
         <div className="n-list" style={{ right: mobileMenu ? "0px" : "" }}>
           <ul>
             <li className="n-cross">
-              {" "}
-              <ClearIcon
-                onClick={() => {
-                  setMobileMenu(false);
-                }}
-              />{" "}
+              <ClearIcon onClick={() => setMobileMenu(false)} />
             </li>
+
             <li>
-              {" "}
               <Link
                 to="/"
-                onClick={() => {
-                  setMobileMenu(false);
-                }}>
+                className={location.pathname === "/" ? "active-link" : ""}
+                onClick={() => setMobileMenu(false)}>
                 {mobileMenu ? (
                   <div className="iconset">
                     <img src={home} alt="home" width={25} className="icon" />
@@ -60,42 +56,29 @@ const Navbar = ({ isAuthenticated, user }) => {
               </Link>
             </li>
             <li>
-              {" "}
-              <ScrollLink
-                to="/"
-                targetId="about"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setMobileMenu(false);
-                  document
-                    .getElementById("about")
-                    .scrollIntoView({ behavior: "smooth" });
-                }}>
+              <Link
+                to="/events"
+                className={location.pathname === "/events" ? "active-link" : ""}
+                onClick={() => setMobileMenu(false)}>
                 {mobileMenu ? (
                   <div className="iconset">
-                    <img src={about} alt="about" width={25} className="icon" />
-                    <span className="icon-name">About</span>
+                    <img src={events} alt="events" width={25} className="icon" />
+                    <span className="icon-name">Events</span>
                   </div>
                 ) : (
-                  "About"
+                  "Events"
                 )}
-              </ScrollLink>
+              </Link>
             </li>
+
             <li>
-              {" "}
               <Link
                 to="/gallery"
-                onClick={() => {
-                  setMobileMenu(false);
-                }}>
+                className={location.pathname === "/gallery" ? "active-link" : ""}
+                onClick={() => setMobileMenu(false)}>
                 {mobileMenu ? (
                   <div className="iconset">
-                    <img
-                      src={gallery}
-                      alt="gallery"
-                      width={25}
-                      className="icon"
-                    />
+                    <img src={gallery} alt="gallery" width={25} className="icon" />
                     <span className="icon-name">Gallery</span>
                   </div>
                 ) : (
@@ -103,21 +86,15 @@ const Navbar = ({ isAuthenticated, user }) => {
                 )}
               </Link>
             </li>
+
             <li>
-              {" "}
               <Link
                 to="/merch"
-                onClick={() => {
-                  setMobileMenu(false);
-                }}>
+                className={location.pathname === "/merch" ? "active-link" : ""}
+                onClick={() => setMobileMenu(false)}>
                 {mobileMenu ? (
                   <div className="iconset">
-                    <img
-                      src={merch}
-                      alt="gallery"
-                      width={25}
-                      className="icon"
-                    />
+                    <img src={merch} alt="merch" width={25} className="icon" />
                     <span className="icon-name">Merch</span>
                   </div>
                 ) : (
@@ -125,13 +102,12 @@ const Navbar = ({ isAuthenticated, user }) => {
                 )}
               </Link>
             </li>
+
             <li>
-              {" "}
               <Link
                 to="/team"
-                onClick={() => {
-                  setMobileMenu(false);
-                }}>
+                className={location.pathname === "/team" ? "active-link" : ""}
+                onClick={() => setMobileMenu(false)}>
                 {mobileMenu ? (
                   <div className="iconset">
                     <img src={team} alt="team" width={25} className="icon" />
@@ -142,43 +118,17 @@ const Navbar = ({ isAuthenticated, user }) => {
                 )}
               </Link>
             </li>
+
+            
+
             <li>
-              {" "}
-              <Link
-                to="/events"
-                onClick={() => {
-                  setMobileMenu(false);
-                }}>
-                {mobileMenu ? (
-                  <div className="iconset">
-                    <img
-                      src={events}
-                      alt="events"
-                      width={25}
-                      className="icon"
-                    />
-                    <span className="icon-name">Events</span>
-                  </div>
-                ) : (
-                  "Events"
-                )}
-              </Link>
-            </li>
-            <li>
-              {" "}
               <Link
                 to="/contact"
-                onClick={() => {
-                  setMobileMenu(false);
-                }}>
+                className={location.pathname === "/contact" ? "active-link" : ""}
+                onClick={() => setMobileMenu(false)}>
                 {mobileMenu ? (
                   <div className="iconset">
-                    <img
-                      src={contact}
-                      alt="contact"
-                      width={25}
-                      className="icon"
-                    />
+                    <img src={contact} alt="contact" width={25} className="icon" />
                     <span className="icon-name">Contact Us</span>
                   </div>
                 ) : (
@@ -193,28 +143,22 @@ const Navbar = ({ isAuthenticated, user }) => {
           {user && user.role === "admin" && <Link to="/admin/mail">Mail</Link>}
           <Link to={isAuthenticated ? "/me" : "/login"}>
             {isAuthenticated ? (
-              <Button
-                variant="outlined"
-                sx={{ border: "0", color: "#6846f8" }}
-                endIcon={<Avatar src={user && user.avatar.url} />}>
+              <Button sx={{ border: "0", color: "#6846f8" }} endIcon={<Avatar src={user && user.avatar.url} />}>
                 {user && user.name.split(" ")[0]}
               </Button>
             ) : (
-              <Button
-                variant="contained"
-                sx={{ backgroundColor: "#8269ec" }}
-                disableElevation
-                endIcon={<LoginIcon />}>
-                Login
-              </Button>
+              <Button 
+  variant="contained" 
+  sx={{ backgroundColor: "#8269ec", ":hover": { backgroundColor: "#3b11a0" } }} 
+  disableElevation 
+  endIcon={<LoginIcon />}
+>
+  Login
+</Button>
             )}
           </Link>
           <div className="n-bars">
-            <MenuIcon
-              onClick={() => {
-                setMobileMenu(true);
-              }}
-            />
+            <MenuIcon onClick={() => setMobileMenu(true)} />
           </div>
         </div>
       </div>

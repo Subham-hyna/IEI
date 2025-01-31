@@ -37,7 +37,7 @@ const Newsletter = () => {
         <div className='news-inner'>
             <h1>Be the first to <span>know</span></h1>
             <h2>We will just give you the <span>right</span> amount of knowledge</h2>
-            <h2>Sign up for our <span>Weekly Newsletter</span> and be the first to know about special</h2>
+            <h2>Sign up for our <span>Newsletter</span> and be the first to know about the events we organize!</h2>
             <h3>no spams, we promise</h3>
             <div className='news-messagebox'>
                 <h3>Subscribe Here!</h3>

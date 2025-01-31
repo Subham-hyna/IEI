@@ -50,25 +50,25 @@ const About = () => {
                   src="https://res.cloudinary.com/dsntngid4/image/upload/v1737809404/rajib-sir_hkgm8c.jpg"
                   alt="FIC"
                 />
-                <p>Faculty-In-Charge</p>
+                <p>Faculty-In-Charge<br></br>Dr. Rajeeb Dey</p>
               </SwiperSlide>
             </div>
             <div>
               <SwiperSlide>
                 <img
-                  src="https://res.cloudinary.com/dl71curl8/image/upload/v1706030935/avatars/WhatsApp_Image_2024-01-23_at_21.44.08_w5nvey.jpg"
+                  src="https://res.cloudinary.com/dsntngid4/image/upload/v1738342870/shreya-didi_l5efqv.jpg"
                   alt="Pesident"
                 />
-                <p>President</p>
+                <p>President<br></br>Shreya Goswami</p>
               </SwiperSlide>
             </div>
             <div>
               <SwiperSlide>
                 <img
-                  src="https://res.cloudinary.com/dl71curl8/image/upload/v1706096969/avatars/pp_glz4kw.jpg"
+                  src="https://res.cloudinary.com/dsntngid4/image/upload/v1738341043/gyan_bhaiya_rupgal.jpg"
                   alt="GS"
                 />
-                <p>General Secretary</p>
+                <p>General Secretary<br></br>Gyan S. Hazarika</p>
               </SwiperSlide>
             </div>
           </Swiper>

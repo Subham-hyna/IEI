@@ -80,7 +80,7 @@ const DevTeam = () => {
             spaceBetween: 100,
           },
           1400: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 200,
           },
         }}

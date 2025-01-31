@@ -7,27 +7,59 @@
 
 .t-upper {
     position: relative;
-    margin-bottom: 50px;
-    height: 286px;
+    height: 320px;
     display: flex;
-    opacity: 0.8;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    background: url('../../assets/core-team-img.jpg') no-repeat;
+    background-size: cover;
+    background-position: center -320px;
+    opacity: 0.9;
+    color: white;
 }
 
-.t-upper:before {
+.t-upper::before {
     content: "";
-    background: url('../../assets/teamsbg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
     position: absolute;
-    background-position: top;
     top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-    left: 0;
-    opacity: 0.6;
+    background: rgba(0, 0, 0, 0.6);
     z-index: -1;
+}
+
+
+/* Header Text */
+.team-heading {
+    /* text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6); */
+    /* text-align: center; */
+    /* letter-spacing: 1px; */
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 80px;
+    border-radius: 8px;
+}
+
+.team-heading h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.team-heading span {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #d1d1d1;
+    opacity: 0.8;
 }
 
 .t-upper>span {
@@ -75,6 +107,7 @@
     justify-content: center;
     align-items: center;
     gap: 50px;
+    margin-top: 20px;
     padding: 0 20px 50px;
 }
 
@@ -130,10 +163,29 @@
     margin-top: 10px;
 }
 
+.style-heading {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+}
+
+.style-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 70%;
+    height: 2.5px;
+    border-radius: 20px;
+    background-color: #8269ec;
+}
 
 @media screen and (max-width: 1150px) {
     .t-upper {
         margin-bottom: 60px;
+        background-position: center;
     }
 
     .t-upper>span {
@@ -154,6 +206,7 @@
     .t-upper {
         height: 140px;
         margin-bottom: 100px;
+
     }
 
     .t-upper>span {
@@ -170,6 +223,8 @@
 }
 
 @media screen and (max-width: 450px) {
+
+
     .t-upper {
         margin-bottom: 123px;
     }
@@ -189,6 +244,10 @@
 
     .team-swiper {
         width: 100%;
+    }
+
+    .team-heading {
+        padding: 5px 10px;
     }
 }
 

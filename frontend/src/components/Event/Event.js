@@ -223,7 +223,7 @@ const Event = () => {
 </Modal>
         </div>
         <div className='event-lower'>
-            <h1>{status.toUpperCase()} EVENTS</h1>
+            <h1><span>{status.toUpperCase()}</span> EVENTS</h1>
             <div>
                 {events.length > 0 ? 
                 events.map((event)=>(

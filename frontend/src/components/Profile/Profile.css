@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: flex-start;
     padding: 100px;
+    margin-top: 50px;
     min-height: 100vh;
 }
 
@@ -131,6 +132,7 @@
         color: grey;
         transition: 0.3s ease-in-out;
         justify-content: start;
+        margin-top: 50px;
     }
 
     .p-left>ul>li {

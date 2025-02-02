@@ -1,8 +1,8 @@
-.gallery-card{
+.gallery-card {
     position: relative;
 }
 
-.gallery-card>img{
+.gallery-card>img {
     width: 400px;
     height: 250px;
     border-radius: 19px;
@@ -13,28 +13,43 @@
     transition: 0.3s;
 }
 
-.gallery-card>i{
+.gallery-card>i {
     position: absolute;
     bottom: 10px;
     right: 10px;
 }
 
-.gallery-card>i>svg{
-    color: red;
-    font-size: 36px;
+.gallery-card-actions>i {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
 
-.gallery-card>i>svg:hover{
-    color: rgb(235, 66, 94);
+
+.gallery-card-actions>i>svg {
+    font-size: 36px;
+    color: rgb(238, 31, 114);
     cursor: pointer;
 }
 
-.gallery-card>img:hover{
+.gallery-card>div>a {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.gallery-card>div>a>i>svg {
+    font-size: 36px;
+    color: white;
+}
+
+
+.gallery-card>img:hover {
     transform: scale(1.025);
     cursor: pointer;
 }
 
-.gallery-card-modal{
+.gallery-card-modal {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -50,42 +65,42 @@
     align-items: center;
 }
 
-.gallery-card-modal>img{
+.gallery-card-modal>img {
     width: 50vw;
     height: 35vw;
     object-fit: contain;
 }
 
-@media screen and (max-width:1250px){
-    .gallery-card>img{
+@media screen and (max-width:1250px) {
+    .gallery-card>img {
         width: 350px;
         height: 225px;
     }
 }
 
-@media screen and (max-width:950px){
-    .gallery-card-modal>img{
+@media screen and (max-width:950px) {
+    .gallery-card-modal>img {
         width: 80vw;
         height: 60vw;
     }
 }
 
-@media screen and (max-width:750px){
-    .gallery-card>img{
+@media screen and (max-width:750px) {
+    .gallery-card>img {
         width: 282px;
         height: 188px;
     }
 }
 
-@media screen and (max-width:650px){
-    .gallery-card-modal>img{
+@media screen and (max-width:650px) {
+    .gallery-card-modal>img {
         width: 75vw;
         height: 70vw;
     }
 }
 
-@media screen and (max-width:650px){
-    .gallery-card-modal>img{
+@media screen and (max-width:650px) {
+    .gallery-card-modal>img {
         width: 85vw;
         height: 95vw;
     }

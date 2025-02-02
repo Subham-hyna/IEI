@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="f-company">
             <div>
               <img src={logo} alt="IEI_LOGO" />
-              <h3>INSTITUTION OF ENGINNERS, INDIA (IEI)</h3>
+              <h3>INSTITUTION OF ENGINEERS, INDIA <span>(IEI)</span></h3>
             </div>
             <p>
             A leading professional organization promoting engineering excellence, innovation, and collaboration in India.
@@ -58,15 +58,15 @@ const Footer = () => {
             <div>
               <div>
                 <EmailRoundedIcon />
-                <p>iei.nitsilchar@gmail.com</p>
+                <Link to="mailto:iei.nitsilchar@gmail.com">iei.nitsilchar@gmail.com</Link>
               </div>
               <div>
                 <LocalPhoneRoundedIcon />
-                <p>7800748553</p>
+                <Link to="tel:7800748553">7800748553</Link>
               </div>
               <div>
                 <LocalPhoneRoundedIcon />
-                <p>9310581406</p>
+                <Link to="tel:7800748553">9310581406</Link>
               </div>
               <div>
                 <BusinessRoundedIcon />
@@ -94,7 +94,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="f-lower">
-        <p>&copy; Copyright {new Date().getFullYear()}. All Rights Reserved</p>
+        <p>&copy;{new Date().getFullYear()} IEI Student Chapter, NIT Silchar. All Rights Reserved</p>
+        <p>Designed, developed and put into action by the Tech team</p>
       </div>
     </section>
   );

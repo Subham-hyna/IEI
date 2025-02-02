@@ -52,6 +52,10 @@
     margin-top: 10px;
 }
 
+div>i>svg {
+    color: #3d269c;
+}
+
 .contact-upper>h1::after {
     content: '';
     position: absolute;
@@ -249,6 +253,10 @@
         font-size: 42px;
     }
 
+    .contact-upper>h1>span>svg {
+        width: 40px;
+    }
+
     .contact-upper>p {
         font-size: 14px;
     }
@@ -262,7 +270,7 @@
     }
 
     .contact-upper>h1 {
-        font-size: 38px;
+        font-size: 27px;
     }
 
     .contact-upper>h1::after {

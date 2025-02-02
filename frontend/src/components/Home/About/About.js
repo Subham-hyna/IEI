@@ -15,7 +15,6 @@ const About = () => {
       <div className="about-left">
         <div className="nitxiei">
           <img src={logo} alt="IEI_logo" width={300} className="logo" />
-          <span className="x">X</span>
           <img src={nit} alt="NIT_Silchar" width={300} className="nit" />
         </div>
         <div>
@@ -76,27 +75,16 @@ const About = () => {
       </div>
       <div className="about-right">
         <span>ABOUT US</span>
-        <h1>IEI Students Chapter</h1>
+        <h1>IEI Student Chapter</h1>
         <h3>National Institute of Technology, Silchar</h3>
         <p>
-          The IEI Students' Chapter at NIT Silchar is a thriving community of
-          engineering students affiliated with the larger Institution of
-          Engineers (India). Committed to fostering innovation, professional
-          growth, and networking opportunities among its members, the chapter
-          serves as a dynamic platform for student engineers. Through a variety
-          of events such as seminars, workshops, guest lectures, and
-          competitions, the chapter aims to provide a platform for students to
-          enhance their technical knowledge and professional skills in various
-          engineering fields.
+          The IEI Student Chapter at NIT Silchar is a vibrant community of engineering students affiliated with the Institution of Engineers (India). Committed to fostering innovation, professional growth, and networking opportunities, the chapter serves as a dynamic platform for budding engineers. Through seminars, workshops, guest lectures, and competitions, it strives to enrich students' technical knowledge and sharpen their professional skills across diverse engineering disciplines.
         </p>
         <p>
-          The purpose of the IEI Student Chapter at NIT Silchar is to facilitate
-          the exchange of ideas and knowledge among its members. It creates a
-          supportive environment where students can explore new concepts, work
-          on projects, and connect with industry experts. The chapter's diverse
-          activities, including industry visits, contribute to the holistic
-          development of its members, guiding them to be not only technically
-          proficient but also smart, ethical, and always ready to learn.
+        The chapter’s core purpose is to promote the exchange of ideas and knowledge among its members. It cultivates a collaborative environment where students can explore emerging concepts, engage in hands-on projects, and connect with industry leaders. With activities ranging from technical sessions to industry visits, the chapter ensures the holistic development of its members, shaping them into technically proficient, ethical, and future-ready professionals.
+        </p>
+        <p>
+        The chapter is guided by its esteemed faculty in-charge, Dr. Rajeeb Dey, an Associate Professor in the Electrical Engineering Department at NIT Silchar. Dr. Dey has made significant contributions to the field of biomedical engineering and has represented the institute as a keynote speaker at numerous workshops and events. His expertise and mentorship play a pivotal role in shaping the chapter's initiatives and inspiring students to excel in their academic and professional pursuits.
         </p>
       </div>
     </div>

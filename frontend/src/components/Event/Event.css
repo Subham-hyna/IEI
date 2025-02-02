@@ -147,6 +147,10 @@
     position: relative;
 }
 
+.event-lower>h1>span {
+    color: #8269ec;
+}
+
 .event-lower>div {
     display: flex;
     justify-content: space-between;

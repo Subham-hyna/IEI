@@ -138,6 +138,11 @@
     margin: 20px 0;
 }
 
+.popup-price {
+    color: #8269ec;
+    font-weight: 600;
+}
+
 .zoomable-container {
     position: relative;
     overflow: hidden;

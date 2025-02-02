@@ -12,13 +12,6 @@
     padding-bottom: 30px;
 }
 
-.x {
-    font-size: 5rem;
-    color: #5c20a1
-}
-
-
-
 .about-left {
     display: flex;
     flex-direction: column;
@@ -33,6 +26,7 @@
     width: 239px;
     height: 239px;
 }
+
 
 .about-left>div {
     display: flex;
@@ -101,14 +95,14 @@
 }
 
 .about-right>h3 {
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 600;
     letter-spacing: 5px;
     color: #9061c6;
 }
 
 .about-right>p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 2;
     color: #585757;
 }

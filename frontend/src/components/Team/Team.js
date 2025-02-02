@@ -111,7 +111,7 @@ const Team = () => {
       <MetaData title={`IEI TEAM - 20${year}-${nextYear}`} />
       <div className="t-upper">
        < div className="team-heading">
-        <h1>Members<span>Unity, Vision, Impact, Success</span></h1></div>
+        <h1>Team<span>Unity, Vision, Impact, Success</span></h1></div>
         { user && user.role === "admin" &&<button onClick={handleOpen}>Add Member</button>}
         <Modal open={open} onClose={handleClose}>
   <div className="add-member-container">
@@ -238,7 +238,7 @@ const Team = () => {
   </div>
 
   <div>
-    <span className="style-heading">4th Year Members</span>
+    <span className="style-heading">4<sup>th</sup> Year Members</span>
     <Swiper
     centeredSlides={true}
       slidesPerView={1}
@@ -265,7 +265,7 @@ const Team = () => {
   </div>
 
   <div>
-    <span className="style-heading">3rd Year Members</span>
+    <span className="style-heading">3<sup>rd</sup> Year Members</span>
     <Swiper
     centeredSlides={true}
       slidesPerView={1}
@@ -292,7 +292,7 @@ const Team = () => {
   </div>
 
   <div>
-    <span className="style-heading">2nd Year Members</span>
+    <span className="style-heading">2<sup>nd</sup> Year Members</span>
     <Swiper
     centeredSlides={true}
       slidesPerView={1}

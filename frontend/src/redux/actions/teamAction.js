@@ -28,7 +28,7 @@ export const getTeam = (fy) => async (dispatch) => {
     let link = `${server}/getMember?FY=${fy}`;
 
     const { data } = await axios.get(link);
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    // await new Promise((resolve) => setTimeout(resolve, 500));
     dispatch(allTeamSuccess(data));
   } catch (error) {
     dispatch(allTeamFail(error.response.data.message));
@@ -47,7 +47,7 @@ export const createMember = (memberData, token) => async (dispatch) => {
       memberData,
       config
     );
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    // await new Promise((resolve) => setTimeout(resolve, 500));
     dispatch(newTeamSuccess(data));
   } catch (error) {
     dispatch(newTeamFail(error.response.data.message));
@@ -62,7 +62,7 @@ export const deleteTeam = (id, token) => async (dispatch) => {
     const { data } = await axios.delete(
       `${server}/admin/deleteMember/${id}?token=${token}`
     );
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    // await new Promise((resolve) => setTimeout(resolve, 500));
     dispatch(deleteTeamSuccess(data));
   } catch (error) {
     dispatch(deleteTeamFail(error.response.data.message));
@@ -81,7 +81,7 @@ export const updateTeam = (memberData, id, token) => async (dispatch) => {
       memberData,
       config
     );
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    // await new Promise((resolve) => setTimeout(resolve, 500));
     dispatch(updateTeamSuccess(data));
   } catch (error) {
     dispatch(updateTeamFail(error.response.data.message));

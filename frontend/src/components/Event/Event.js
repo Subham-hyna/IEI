@@ -113,7 +113,7 @@ const Event = () => {
     <div className='event'>
         <MetaData title={`${status.toUpperCase()} EVENTS`} />
         <div className='event-upper'>
-            <h1>Innovate, Learn, Create Together</h1>
+            <h1>INNOVATE, LEARN, CREATE TOGETHER</h1>
             <div>
             <FormControl>
               <InputLabel sx={{ color: "rgb(63 41 175)" , fontWeight : "500" , fontSize : "1.1rem"}} >Status</InputLabel>

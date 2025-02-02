@@ -20,8 +20,7 @@ const Footer = () => {
               <h3>INSTITUTION OF ENGINNERS, INDIA (IEI)</h3>
             </div>
             <p>
-              The first free end to end analytics service for the site,designed
-              to work with enterprises of various levels and business segments
+            A leading professional organization promoting engineering excellence, innovation, and collaboration in India.
             </p>
           </div>
           <div className="f-social">

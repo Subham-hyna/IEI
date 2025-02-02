@@ -118,7 +118,7 @@
 @media screen and (max-width: 800px) {
     .n-cross {
         display: block;
-        color: rgb(196, 1, 66);
+        color: #8269ec;
     }
 
     .n-bars {
@@ -157,14 +157,13 @@
     }
 
     .n-list {
-        background: #a8d0f4;
+        background-color: #e2dcfa;
         position: fixed;
         top: 0;
         right: -200px;
         width: 200px;
         height: 100vh;
         z-index: 100;
-        color: grey;
         transition: 0.3s ease-in-out;
     }
 

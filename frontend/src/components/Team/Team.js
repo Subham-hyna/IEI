@@ -25,6 +25,7 @@ import {
   CircularProgress, 
 } from "@mui/material";
 
+
 const Team = () => {
   const [year, setYear] = useState("24");
   const [open, setOpen] = useState(false);
@@ -109,7 +110,8 @@ const Team = () => {
     <div className="team">
       <MetaData title={`IEI TEAM - 20${year}-${nextYear}`} />
       <div className="t-upper">
-        <span>Unity, Vision, Impact, Success</span>
+       < div className="team-heading">
+        <h1>Members<span>Unity, Vision, Impact, Success</span></h1></div>
         { user && user.role === "admin" &&<button onClick={handleOpen}>Add Member</button>}
         <Modal open={open} onClose={handleClose}>
   <div className="add-member-container">
@@ -209,7 +211,7 @@ const Team = () => {
       </div>
       <div className="t-lower">
   <div>
-    <span>Faculties</span>
+    <span className="style-heading">Faculties</span>
     <Swiper
       slidesPerView={1}
       centeredSlides={true}
@@ -236,7 +238,7 @@ const Team = () => {
   </div>
 
   <div>
-    <span>4th Year Members</span>
+    <span className="style-heading">4th Year Members</span>
     <Swiper
     centeredSlides={true}
       slidesPerView={1}
@@ -263,7 +265,7 @@ const Team = () => {
   </div>
 
   <div>
-    <span>3rd Year Members</span>
+    <span className="style-heading">3rd Year Members</span>
     <Swiper
     centeredSlides={true}
       slidesPerView={1}
@@ -290,7 +292,7 @@ const Team = () => {
   </div>
 
   <div>
-    <span>2nd Year Members</span>
+    <span className="style-heading">2nd Year Members</span>
     <Swiper
     centeredSlides={true}
       slidesPerView={1}

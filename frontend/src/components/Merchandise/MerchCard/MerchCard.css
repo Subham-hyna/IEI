@@ -2,7 +2,7 @@
     width: 100%;
     max-width: 320px;
     border-radius: 16px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 102, 255, 0.3);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1), 0 0 15px #7854f8bd;
     /* Added bluish glow */
     overflow: hidden;
     background-color: #fff;
@@ -11,7 +11,7 @@
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 102, 255, 0.6);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1), 0 0 20px #5f3fd7bd;
     /* Increased glow on hover */
 }
 
@@ -72,7 +72,7 @@
     font-size: 14px;
     font-weight: bold;
     color: #fff;
-    background: linear-gradient(45deg, #0066ff, #00d5ff);
+    background: linear-gradient(45deg, #5f3fd7bd, #5236b8bd);
     text-decoration: none;
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
@@ -81,7 +81,7 @@
 
 .order-button:hover {
     transform: translateY(-2px);
-    background: linear-gradient(45deg, #00d5ff, #0066ff);
+    background: linear-gradient(45deg, #5236b8bd, #5f3fd7bd);
 }
 
 .order-button:active {

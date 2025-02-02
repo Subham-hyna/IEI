@@ -9,6 +9,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     scroll-behavior: smooth;
+    padding-bottom: 30px;
 }
 
 .x {

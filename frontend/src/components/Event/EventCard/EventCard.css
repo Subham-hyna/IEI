@@ -6,7 +6,7 @@
     background: #ecf3ff;
     flex-direction: column;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.229);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.229);
     transition: 0.3s;
     margin: 0 auto;
 }
@@ -27,23 +27,25 @@
 
 .event-card>div>h3 {
     font-size: 21px;
-    font-family: "Roboto" , sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 600;
     letter-spacing: 0.51px;
-    background: linear-gradient( #3e3dc2 , #00ffd6);
+    background: linear-gradient(#3e3dc2, #00ffd6);
     -webkit-text-fill-color: transparent;
+    background-clip: text;
     -webkit-background-clip: text;
 }
 
 .event-card>div>h1 {
     font-size: 35px;
+    color: #7f51c2;
 }
 
 .event-card>div>h2 {
-    font-weight: 400;
+    font-weight: 600;
     font-size: 18px;
     color: #393939;
-    font-family: 'Roboto' ,sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .event-card>div>textarea {
@@ -61,7 +63,7 @@
     color: #6461ff;
 }
 
-.event-card>span{
+.event-card>span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +71,7 @@
     position: relative;
 }
 
-.event-card>span>button{
+.event-card>span>button {
     background: #7f51c2;
     color: white;
     padding: 11px;
@@ -80,11 +82,11 @@
     margin: 0 auto;
     text-align: center;
     cursor: pointer;
-    font-family: "Roboto" , sans-serif;
+    font-family: "Roboto", sans-serif;
     border: none;
 }
 
-.event-card>span>button:hover{
+.event-card>span>button:hover {
     background: #643f9d;
 }
 
@@ -96,71 +98,82 @@
     animation: left-animation 1s infinite;
 }
 
-.event-card:hover{
+.event-card:hover {
     transform: scale(1.015);
-    box-shadow: 0 0 10px rgba(0,0,0,0.429);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.429);
 }
 
 @keyframes blink-animation {
     0% {
-      opacity: 1;
+        opacity: 1;
     }
+
     50% {
-      opacity: 0;
+        opacity: 0;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
 }
 
-@media screen and (max-width : 1250px){
-    .event-card{
+@media screen and (max-width : 1250px) {
+    .event-card {
         width: 66vw;
         height: inherit;
+        padding-bottom: 20px;
     }
-    .event-card>a>img{
+
+    .event-card>a>img {
         width: 66vw;
         height: 42vw;
     }
 }
 
-@media screen and (max-width : 750px){
-    .event-card{
+@media screen and (max-width : 750px) {
+    .event-card {
         width: 85vw;
     }
-    .event-card>a>img{
+
+    .event-card>a>img {
         width: 85vw;
         height: 47vw;
     }
 }
 
-@media screen and (max-width : 450px){
-    .event-card{
+@media screen and (max-width : 450px) {
+    .event-card {
         width: 85vw;
     }
-    .event-card>a>img{
+
+    .event-card>a>img {
         width: 85vw;
         height: 55vw;
     }
-    .event-card>div>h3{
+
+    .event-card>div>h3 {
         font-size: 18px;
     }
-    .event-card>div>h1{
-        font-size:30px;
+
+    .event-card>div>h1 {
+        font-size: 30px;
     }
-    .event-card>div>h2{
-        font-size:16px;
+
+    .event-card>div>h2 {
+        font-size: 16px;
     }
-    .event-card>div>p{
-        font-size:14px;
+
+    .event-card>div>p {
+        font-size: 14px;
     }
-    .event-card>div>a{
-        font-size:14px;
+
+    .event-card>div>a {
+        font-size: 14px;
     }
 }
 
-@media screen and (min-width:1800px){
-    .event-card{
+@media screen and (min-width:1800px) {
+    .event-card {
         height: inherit;
     }
 }

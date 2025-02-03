@@ -2,16 +2,26 @@
     display: flex;
     height: 3rem;
     padding: 10px;
-    background: linear-gradient(to right, #e2e2e267, #c9d6ff);
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
     opacity: 1;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
     justify-content: flex-start;
     align-items: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.229);
+    /* border-bottom: 5px solid #8269ec; */
     position: fixed;
     z-index: 1001;
     top: 0;
     width: 100%;
+    box-shadow: none;
+    border-bottom: 3px solid #8169ec00;
+    transition: all 0.2s linear;
+}
+
+.scrolled {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.229);
+    border-bottom: 3px solid #8269ec;
+
+
 }
 
 .n-left {

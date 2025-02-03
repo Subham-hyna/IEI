@@ -51,7 +51,7 @@ const Merch = () => {
   return (
     <div className="merch-page">
       <MetaData title={`MERCHANDISE`} />
-      <h1 className="page-title">IEI x INTERSTELLAR</h1>
+      <h1 className="page-title">Merchandise</h1>
 
 <p className="merch-description">
   Discover our exclusive <span className="highlight">Interstellar-inspired&nbsp;</span> 

@@ -9,131 +9,122 @@
     align-items: center;
     background-color: #512da8;
     color: #ffffffed;
-    padding: 27px 3vw;
-    gap: 10vw;
+    padding: 40px 3vw;
+    gap: 6vw;
 }
 
 .f-left {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 40vw;
-    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
 }
 
 .f-company {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: flex-start;
-    width: 400px;
-    gap: 32px;
+    width: 100%;
+    gap: 20px;
 }
 
 .f-company>div {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     gap: 14px;
 }
 
 .f-company>div>img {
-    width: 71px;
+    display: flex;
+    width: 60px;
+    margin: auto;
 }
 
 .f-company>div>h3 {
-    font-size: 31px;
+    font-size: 26px;
     font-family: "Roboto", sans-serif;
 }
 
 .f-company>p {
-    font-size: 14px;
+    font-size: 13px;
     font-family: "Roboto", sans-serif;
+    max-width: 320px;
 }
 
 .f-social {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 20px;
-    width: 200px;
+    gap: 12px;
 }
 
 .f-social>span {
-    font-size: 24px;
-    font-family: "Roboto", sans-serif;
+    font-size: 18px;
     font-weight: 600;
 }
 
 .f-social>div {
     display: flex;
-    flex-direction: row;
-    gap: 28px;
+    gap: 16px;
 }
 
 .f-social>div>a>img {
-    width: 47px;
-    border-radius: 37%;
+    width: 40px;
+    border-radius: 50%;
 }
 
 .f-right {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 40vw;
+    width: 100%;
     gap: 20px;
 }
 
 .f-contact {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 25px;
+    gap: 18px;
 }
 
 .f-contact>span {
-    font-size: 24px;
-    font-family: "Roboto", sans-serif;
+    font-size: 20px;
     font-weight: 600;
 }
 
 .f-contact>div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 .f-contact>div>div {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    gap: 18px;
+    gap: 12px;
 }
 
-.f-contact>div>div>p {
+.f-contact>div>div>a {
+    color: white;
+    text-decoration: none;
     font-size: 14px;
-    font-family: "Roboto", sans-serif;
 }
 
 .f-quick {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 31px;
+    gap: 22px;
 }
 
 .f-quick>span {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
 }
 
 .f-quick>ul {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 16px;
+    gap: 12px;
 }
 
 .f-quick>ul>li>a {
@@ -147,15 +138,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    flex-direction: column;
+    padding: 15px;
     background-color: #2b0f6b;
+    gap: 10px;
 }
 
 .f-lower>p {
-    font-size: 15px;
-    font-family: "Roboto", sans-serif;
+    font-size: 14px;
     font-weight: 500;
     color: white;
+    text-align: center;
 }
 
 .icon:hover {
@@ -163,62 +156,136 @@
     transition: all 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 1250px) {
-    .f-left {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 80px;
-    }
 
-    .f-company {
-        width: 378px;
-    }
-
-    .f-right {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 32px;
-    }
-
-    .f-contact {
-        gap: 22px;
-    }
-
-    .f-quicks {
-        gap: 22px;
-    }
-
-}
-
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
     .f-upper {
         flex-direction: column;
         align-items: flex-start;
+        padding: 20px 5vw;
+        gap: 40px;
     }
-}
 
-@media screen and (max-width: 420px) {
-    .f-left {
-        gap: 60px;
+    .f-left,
+    .f-right {
+        width: 100%;
     }
 
     .f-company {
-        width: 80vw;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .f-company>div>h3 {
-        font-size: 28px;
+        font-size: 22px;
     }
 
-    .f-company>div>p {
+    .f-company>div>h3>span {
+        display: block;
+        text-align: center;
+    }
+
+    .f-company>p {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: auto;
         font-size: 12px;
+        max-width: 100%;
     }
 
-    .f-left {
-        width: 80vw;
+    .f-social {
+        width: 100%;
+    }
+
+    .f-social>div {
+        gap: 12px;
+    }
+
+    .f-social>div>a>img {
+        width: 35px;
     }
 
     .f-right {
-        width: 90vw;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .f-contact>div>div {
+        gap: 10px;
+    }
+
+    .f-contact>div>div>a {
+        font-size: 13px;
+    }
+
+    .f-quick>ul {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .f-upper {
+        padding: 20px 4vw;
+        gap: 30px;
+    }
+
+    .f-company>div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .f-company>div>img {
+        width: 50px;
+    }
+
+    .f-company>div>h3 {
+        font-size: 20px;
+    }
+
+
+    .f-company>p {
+        font-size: 12px;
+    }
+
+    .f-social>span {
+        font-size: 16px;
+    }
+
+    .f-social>div {
+        gap: 8px;
+    }
+
+    .f-social>div>a>img {
+        width: 32px;
+    }
+
+    .f-right {
+        gap: 20px;
+    }
+
+    .f-contact>span,
+    .f-quick>span {
+        font-size: 18px;
+    }
+
+    .f-contact>div>div {
+        gap: 8px;
+    }
+
+    .f-contact>div>div>a {
+        font-size: 12px;
+    }
+
+    .f-quick>ul>li>a {
+        font-size: 13px;
+    }
+
+    .f-lower {
+        padding: 12px;
+    }
+
+    .f-lower>p {
+        font-size: 13px;
     }
 }

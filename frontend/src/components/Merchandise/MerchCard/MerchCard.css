@@ -2,7 +2,7 @@
     width: 100%;
     max-width: 320px;
     border-radius: 16px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1), 0 0 15px #7854f8bd;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1), 0 0 15px #2d2c2fbd;
     /* Added bluish glow */
     overflow: hidden;
     background-color: #fff;
@@ -63,7 +63,7 @@
 .card-price {
     font-size: 1rem;
     font-weight: bold;
-    color: #333;
+    color: #7854f8bd;
 }
 
 .order-button {

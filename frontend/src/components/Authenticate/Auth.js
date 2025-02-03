@@ -114,12 +114,12 @@ const Auth = () => {
             />
         </div>
                 <button type='submit'>{loading ? <div className='button-loader'></div> : "Sign Up"}</button>
-                <Link onClick={()=>{setShowSignUp(false)}}>Already Registered! Login Here</Link>
+                <Link onClick={()=>{setShowSignUp(false)}}>Already Registered? Login Here</Link>
             </form>
         </div>
         <div className="form-container sign-in">
             <form onSubmit={loginHandler}>
-                <h1>Sign In</h1>
+                <h1>Log In</h1>
                 <div>
             <label>Email</label>
             <input type='email' placeholder='Email'  value={signinEmail} onChange={(e)=>{setSigninEmail(e.target.value)}}/>
@@ -136,20 +136,20 @@ const Auth = () => {
          </div>
         </div>
             <Link to="/password/forgot">Forgot Password</Link>
-                <button type='submit' >{loading ? <div className='button-loader'></div> : "Sign In"}</button>
-            <Link onClick={()=>{setShowSignUp(true)}}>Not Yet Registered! Register Here</Link>
+                <button type='submit' >{loading ? <div className='button-loader'></div> : "Log In"}</button>
+            <Link onClick={()=>{setShowSignUp(true)}}>Not registered yet? Register here</Link>
             </form>
         </div>
         <div className="toggle-container">
             <div className="toggle">
                 <div className="toggle-panel toggle-left">
-                    <h1>Welcome Back!</h1>
-                    <p>Enter your personal details to use all of site features</p>
+                <h1>Welcome Back!</h1>
+                <p>Log In to continue from where you left!</p>
                     <button className="hidden" onClick={()=>{setShowSignUp(false)}} >Sign In</button>
                 </div>
                 <div className="toggle-panel toggle-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Register with your personal details to use all of site features</p>
+                    <h1>Welcome!</h1>
+                    <p>Sign up with your details to explore additional features of our site!</p>
                     <button className="hidden" onClick={()=>{setShowSignUp(true)}} >Sign Up</button>
                 </div>
             </div>
@@ -200,13 +200,13 @@ const Auth = () => {
         />
     </div>
             <button type='submit'>{loading ? <div className='button-loader'></div> : "Sign Up"}</button>
-            <Link onClick={()=>{setShowSignUp(!showSignup)}}>Already Registered! Login Here</Link>
+            <Link onClick={()=>{setShowSignUp(!showSignup)}}>Already registered? Login Here</Link>
         </form>
     </div>
         :
         <div>
         <form onSubmit={loginHandler}>
-            <h1>Sign In</h1>
+            <h1>Log In</h1>
             <div>
         <label>Email</label>
         <input type='email' placeholder='Email'  value={signinEmail} onChange={(e)=>{setSigninEmail(e.target.value)}}/>
@@ -224,7 +224,7 @@ const Auth = () => {
     </div>
         <Link to="/password/forgot">Forgot Password</Link>
             <button type='submit'>{loading ? <div className='button-loader'></div> : "Sign In"}</button>
-        <Link onClick={()=>{setShowSignUp(!showSignup)}}>Not Yet Registered! Register Here</Link>
+        <Link onClick={()=>{setShowSignUp(!showSignup)}}>Not registered yet? Register Here</Link>
         </form>
     </div>
         }

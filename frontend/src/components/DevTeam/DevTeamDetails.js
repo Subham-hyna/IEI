@@ -30,6 +30,15 @@ export const juniorTeam = [
         github: "https://github.com/BhargobLahon"
     },
     {
+        name: "Sarthak Jha",
+        image_url: "https://res.cloudinary.com/dl71curl8/image/upload/v1706098890/avatars/IMG-20230902-WA0103_-_EE_023_SARTHAK_JHA_l10gro.jpg",
+        contribution: "Contributed in the login-signup form prototype, and also made various changes in the frontend",
+        email: "jhasarthak9@gmail.com",
+        insta: "https://www.instagram.com/i_sarge_/",
+        linkedin: "https://www.linkedin.com/in/sarthakjha2004?trk=universal-search-cluster",
+        github: "https://github.com/SarJ2004"
+    },
+    {
         name: "Saumyabrat Borkotoky",
         image_url: "https://res.cloudinary.com/dl71curl8/image/upload/v1706099757/avatars/WhatsApp_Image_2024-01-24_at_18.05.44_epi31s.jpg",
         contribution: "Contributed specifically in footer",
@@ -55,15 +64,6 @@ export const juniorTeam = [
         insta: "https://www.instagram.com/shwetangshub?igsh=NG84anIycXFkdW1l",
         linkedin: "https://www.linkedin.com/in/shwetangshu-biswas?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         github: "https://github.com/Shwetangshu"
-    },
-    {
-        name: "Sarthak Jha",
-        image_url: "https://res.cloudinary.com/dl71curl8/image/upload/v1706098890/avatars/IMG-20230902-WA0103_-_EE_023_SARTHAK_JHA_l10gro.jpg",
-        contribution: "Contributed in the login-signup form prototype",
-        email: "jhasarthak9@gmail.com",
-        insta: "https://www.instagram.com/i_sarge_/",
-        linkedin: "https://www.linkedin.com/in/sarthakjha2004?trk=universal-search-cluster",
-        github: "https://github.com/SarJ2004"
     },
     {
         name: "Milan Sarmah",

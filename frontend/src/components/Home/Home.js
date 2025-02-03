@@ -49,7 +49,7 @@ const Home = () => {
             transition={{
               delay: 0.2,
             }}>
-            National Institute of Technology, Silchar
+            National Institute of Technology, Silchar Student Chapter
           </motion.h4>
           <motion.p
             initial={{
@@ -63,7 +63,7 @@ const Home = () => {
             transition={{
               delay: 0.4,
             }}>
-            Welcome to the Institute of Engineers India!! Enrich yourselves with
+            Welcome to the Institute of Engineers India! Enrich yourselves with
             knowledge, diverse disciplines, and a vibrant community of
             professionals. Join us on a journey of innovation, collaboration,
             and continuous learning to elevate your engineering prowess with our
@@ -73,7 +73,7 @@ const Home = () => {
             enthusiast, our website is your gateway to enormous information,
             events, and opportunities that will guide you towards your
             engineering journey. Welcome to a digital space where engineering
-            excellence thrives explore, engage, and elevate your engineering
+            excellence thrives. Explore, engage, and elevate your engineering
             journey with us.
           </motion.p>
         </div>

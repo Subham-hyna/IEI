@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import './EventDetails.css'
 import DeleteIcon from "@mui/icons-material/Delete";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import {toast} from 'react-hot-toast';
@@ -50,11 +51,14 @@ const EventDetails = () => {
     <div className='event-details'>
         {event && <MetaData title={`${event.title.toUpperCase()}`} />}
         <div className='event-details-upper'>
+            <div className='back-btn'>
+            <ArrowBackIcon onClick={() => navigate('/events')} style={{ color: '#7f51c2', cursor: 'pointer', fontSize:'2rem'}}/> 
+            </div>
              <img src={event&&event.image.url} alt={event&&event.title} />
              <div>
              {event&&event.status !== "past" && <h3 className='blink'>{event&&event.status.toUpperCase()}</h3>}
              <h1>{event&&event.title}</h1>
-             <textarea readOnly>{event&&event.caption}</textarea>
+             <textarea readOnly  >{event&&event.caption}</textarea>
              {event&&event.status === "upcoming" && 
              <div>
                 <div>

@@ -17,6 +17,7 @@ import Mail from "./components/Mail/Mail";
 import Contact from "./components/Contact/Contact";
 import DevTeam from "./components/DevTeam/DevTeam";
 import ScrollToTop from "./components/utils/ScrollToTop";
+import ScrollTop from "./components/utils/ScrollTop.js";
 import { useDispatch, useSelector } from "react-redux";
 import {
   clearErrors,
@@ -48,8 +49,9 @@ const App = () => {
     }
   }, [dispatch, error, message]);
 
-  return (
+  return (<>
     <Router>
+    <ScrollTop/>
       <Navbar isAuthenticated={isAuthenticated} user={user} />
       <Routes>
         <Route exact path="/" element={<Home />} />
@@ -96,8 +98,9 @@ const App = () => {
       </Routes>
       <Footer />
       <Toaster position="top-right" />
-      <ScrollToTop />
     </Router>
+    <ScrollToTop />
+    </>
   );
 };
 

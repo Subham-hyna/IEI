@@ -8,7 +8,7 @@
     padding-top: 60px;
     padding-bottom: 100px;
     position: relative;
-    background-image: url("../../assets/homebg.jpeg");
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
     background-size: cover;
     background-repeat: no-repeat;
     margin: 30px 0 auto;

@@ -24,7 +24,7 @@ export const getActivity =
       let link = `${server}/getActivity?keyword=${keyword}&page=${currentPage}`;
 
       const { data } = await axios.get(link);
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      // await new Promise((resolve) => setTimeout(resolve, 500));
       dispatch(allActivitySuccess(data));
     } catch (error) {
       dispatch(allActivityFail(error.response.data.message));
@@ -44,7 +44,7 @@ export const createActivity = (activityData, token) => async (dispatch) => {
       config,
       { withCredentials: true }
     );
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    // await new Promise((resolve) => setTimeout(resolve, 500));
     dispatch(newActivitySuccess(data));
   } catch (error) {
     dispatch(newActivityFail(error.response.data.message));
@@ -59,7 +59,7 @@ export const deleteActivity = (id, token) => async (dispatch) => {
     const { data } = await axios.delete(
       `${server}/admin/deleteActivity/${id}?token=${token}`
     );
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    // await new Promise((resolve) => setTimeout(resolve, 500));
     dispatch(deleteActivitySuccess(data));
   } catch (error) {
     dispatch(deleteActivityFail(error.response.data.message));

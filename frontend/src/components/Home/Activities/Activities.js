@@ -26,7 +26,12 @@ const Activities = () => {
     <div className='activity'>
             <h1>EVENTS</h1>
             <div>
-            <p>The IEI Student Chapter at NIT Silchar orchestrated impactful events, commencing with a triumphant inauguration ceremony marked by dignitaries, speeches, and student gratitude. Republic Day saw a patriotic celebration at IEI Silchar local center, emphasizing engineers' roles. The 4th Foundation Day featured a presentation on renewable energy, fostering interaction and knowledge-sharing. A hands-on Arduino Workshop, held on April 3-4, equipped students with coding and robotics skills, guided by experienced instructors. The "IMPETUS" Placement Kickstart Session on April 10, 2023, provided valuable career insights. Engineers' Day was celebrated joyfully, featuring talks by Nirupam Choudhury and CDAC Director Mr. Jitesh Choudhary, encouraging insightful discussions and showcasing engineering excellence. On January 13, 2024, a Cybersecurity Workshop enhanced participants' awareness and skills in navigating the cyber landscape securely, contributing to the holistic development of the student community .</p>
+            <p>The IEI Student Chapter at NIT Silchar began its journey with a memorable inauguration ceremony in its first year, setting the stage for a series of impactful events.  Engineers' Day was celebrated with insightful talks by Nirupam Choudhury and CDAC Director Mr. Jitesh Choudhary, sparking engaging discussions on engineering excellence. The "IMPETUS" Placement Kickstart Session provided valuable career insights to help students prepare for their professional journeys.</p>
+<p>
+Over the years, the chapter has organized a variety of workshops and competitions, including a Cybersecurity Workshop that enhanced participants' skills in navigating the digital landscape securely. The Drone Workshop and Matlab OnRamp Party offered immersive experiences in cutting-edge technologies. Regular Arduino Workshops have played a key role, equipping students with coding and robotics skills, and challenging them with exciting Arduino-based competitions.
+</p>
+<p>
+2025 kicked off with the DataStorm Climate Analysis Challenge, inspiring students to dive into environmental issues and explore data-driven solutions. And with even more thrilling events in the pipeline, the IEI Student Chapter is set to continue its tradition of innovation, learning, and excitement for years to come!</p>
             <div>
             {events.length > 0 &&
                     upcomingEventts.map((event)=>(

@@ -13,9 +13,12 @@
 
 .merch-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
     padding: 10px;
+    flex-wrap: wrap;
 
 }
 
@@ -126,7 +129,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 600px;
-    width: 90%;
+    /* width: 90%; */
     text-align: center;
     z-index: 1000;
 }
@@ -192,6 +195,7 @@
 
 .zoomable-container {
     position: relative;
+    width: 400px;
 }
 
 .image-label {
@@ -208,7 +212,7 @@
 }
 
 .zoomable-image {
-    width: 300px;
+    width: 275px;
     height: auto;
     border-radius: 8px;
     scale: 1.17;
@@ -246,7 +250,41 @@
         padding: 0 15px;
     }
 
+    .popup-content {
+        width: 400px;
+    }
+
+    .zoomable-container {
+        width: 200px;
+    }
+
+    .zoomable-image {
+        width: 200px;
+    }
+
     .page-title {
         height: 200px;
+    }
+}
+
+@media (max-width: 450px) {
+    .merch-description {
+        font-size: 0.9rem;
+    }
+
+    .popup-content {
+        width: 300px;
+    }
+
+    .zoomable-container {
+        width: 150px;
+    }
+
+    .zoomable-image {
+        width: 150px;
+    }
+
+    .page-title {
+        height: 150px;
     }
 }

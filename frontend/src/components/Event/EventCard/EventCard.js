@@ -86,7 +86,7 @@ const EventCard = ({event,  status, deleteHandler}) => {
             {event.status !== "past" && <h3 className='blink'>{event.status.toUpperCase()}</h3>}
             <h1>{event.title}</h1>
             <h2>Organised by IEI(EED) NITS</h2>
-            <textarea>{event.caption.substr(0,150)+"..."}</textarea>
+            <textarea readOnly>{event.caption.substr(0,75)+"..."}</textarea>
             <Link to = {`/event/${event._id}`}>Click here to view more</Link>
         </div>
         { user&&user.role === "admin" && <span>
